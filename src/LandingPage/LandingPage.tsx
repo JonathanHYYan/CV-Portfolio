@@ -9,5 +9,5 @@ const LandingPage = () => {
     </Card>
   </section>
 }
-
+// 
 export default LandingPage;
