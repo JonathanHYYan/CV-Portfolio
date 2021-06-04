@@ -1,12 +1,15 @@
 $primary-color: #758286;
-$secondary-color: orange;
+$secondary-color: #272727;
 $font-color: rgb(26, 184, 196);
-
 $font-weights: (
   "regular":400,
   "medium": 500,
   "bold": 700,
 );
+
+@mixin transition-ease{
+  transition:all 0.5s ease-in-out;
+}
 
 * {
   box-sizing: border-box;

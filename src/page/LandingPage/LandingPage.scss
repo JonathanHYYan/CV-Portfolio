@@ -6,10 +6,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-5%);
+  overflow: hidden;
+
+  .night {
+    background-color: $secondary-color;
+    transform: translateX(100%);
+    @include transition-ease;
+
+  }
 }
 
 .name {
+  position: fixed;
   text-align: center;
   color: $font-color;
+  transform: translateY(-30%);
 }
