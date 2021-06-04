@@ -1,5 +1,12 @@
-$primary-color: #272727;
+$primary-color: #758286;
 $secondary-color: orange;
+$font-color: rgb(26, 184, 196);
+
+$font-weights: (
+  "regular":400,
+  "medium": 500,
+  "bold": 700,
+);
 
 * {
   box-sizing: border-box;

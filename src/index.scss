@@ -1,0 +1,14 @@
+@import './config';
+@import './page/LandingPage/LandingPage.scss';
+
+body {
+  background-color: $primary-color;
+}
+
+h1{
+  font-size: 12em;
+}
+
+h2 {
+  font-weight: regular;
+}
