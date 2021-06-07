@@ -10,13 +10,13 @@ const LandingPage: FunctionComponent = () => {
     });
   }, []);
 
-  let classes = "landing " + (scroll ? "night" : "");
+  const classes = "landing " + (scroll ? "night" : "");
 
   return (
     <section className={classes}>
       <div className="name">
         <h1>I'm John</h1>
-        <h2>a web developer</h2>
+        <h2 className={'hidden-header'}>a web developer</h2>
       </div>
     </section>
   );
