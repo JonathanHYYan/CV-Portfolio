@@ -10,11 +10,11 @@
   background: linear-gradient((to right, $primary-color 50%, $secondary-color 50%));
   background-size: 200%, 100%;
   background-position: left;
-  transition: all 2s ease;
+  @include transition-ease;
 }
 
 .hidden-header {
-  color: $primary-color;
+  color: $primary-color; 
 }
 
 .night {
@@ -25,5 +25,5 @@
   position: fixed;
   text-align: center;
   color: $font-color;
-  transform: translateY(-30%);
+  transform: translateY(-20%);
 }

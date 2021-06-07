@@ -1,16 +1,11 @@
-import { FunctionComponent, useEffect, useState } from "react";
+import { FunctionComponent,  useContext } from "react";
+import ScrollContext from "../../store/context";
 import "./LandingPage.scss";
 
 const LandingPage: FunctionComponent = () => {
-  const [scroll, setScroll] = useState(false);
+  const scrollCtx = useContext(ScrollContext);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 1);
-    });
-  }, []);
-
-  const classes = "landing " + (scroll ? "night" : "");
+  const classes = "landing " + (scrollCtx.scroll ? "night" : "");
 
   return (
     <section className={classes}>
