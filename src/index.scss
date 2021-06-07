@@ -1,14 +1,18 @@
-@import './config';
-@import './page/LandingPage/LandingPage.scss';
+@import "./config";
+@import "./page/LandingPage/LandingPage.scss";
 
 body {
   background-color: $primary-color;
 }
 
-h1{
-  font-size: 12rem;
+h1 {
+  font-size: 10rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.5rem;
 }

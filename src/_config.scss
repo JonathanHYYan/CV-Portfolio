@@ -2,13 +2,32 @@ $primary-color: #758286;
 $secondary-color: #272727;
 $font-color: rgb(26, 184, 196);
 $font-weights: (
-  "regular":400,
+  "regular": 400,
   "medium": 500,
   "bold": 700,
 );
 
-@mixin transition-ease{
-  transition:all 2.5s ease;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition-ease {
+  transition: all 2.5s ease;
+}
+
+.full-page {
+  width: 90%;
+  @include flex-center;
+}
+
+.half-page {
+  width: 50%;
+  @include flex-center;
+}
+.center {
+  margin: 0 5% 0 5%;
 }
 
 * {

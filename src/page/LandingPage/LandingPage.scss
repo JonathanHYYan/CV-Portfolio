@@ -1,4 +1,4 @@
-@import '../../config';
+@import "../../config";
 
 .landing {
   width: 100%;
@@ -7,14 +7,16 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient((to right, $primary-color 50%, $secondary-color 50%));
+  background: linear-gradient(
+    (to right, $primary-color 50%, $secondary-color 50%)
+  );
   background-size: 200%, 100%;
   background-position: left;
   @include transition-ease;
 }
 
 .hidden-header {
-  color: $primary-color; 
+  color: $primary-color;
 }
 
 .night {
@@ -22,7 +24,6 @@
 }
 
 .name {
-  position: fixed;
   text-align: center;
   color: $font-color;
   transform: translateY(-20%);

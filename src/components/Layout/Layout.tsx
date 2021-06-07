@@ -1,5 +1,5 @@
 import NavBar from "./NavBar";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
 import ScrollContext from "../../store/context";
 
 const Layout = (props: any) => {
@@ -9,17 +9,17 @@ const Layout = (props: any) => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 1);
     });
-    setTimeout(function() {
-      if(!scroll){
+    setTimeout(function () {
+      if (!scroll) {
         setScroll(true);
       }
-    },3000)
+    }, 3000);
   }, []);
 
   return (
-    <ScrollContext.Provider value={{scroll:scroll}}>
+    <ScrollContext.Provider value={{ scroll: scroll }}>
       <main>
-        <NavBar />
+        {scroll && <NavBar />}
         {props.children}
       </main>
     </ScrollContext.Provider>

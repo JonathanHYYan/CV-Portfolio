@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const ScrollContext = React.createContext({
-  scroll: false
+  scroll: false,
 });
 
 export default ScrollContext;
