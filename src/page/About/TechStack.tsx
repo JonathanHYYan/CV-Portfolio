@@ -2,7 +2,7 @@ import Card from "../../UI/Card";
 
 const TechStack = () => {
   const content = (
-    <div className="half-page">
+    <div>
       <Card>
         <h2 className="card-title">Tech Stack</h2>
         <p className="card-text">

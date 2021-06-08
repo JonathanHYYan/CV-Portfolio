@@ -2,7 +2,7 @@ import Card from "../../UI/Card";
 
 const Intro = () => {
   const content = (
-    <div className="full-page center">
+    <div>
       <Card>
         <h2 className="card-title">What to Expect?</h2>
         <p className="card-text">
