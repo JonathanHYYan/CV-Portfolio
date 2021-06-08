@@ -4,7 +4,7 @@ import "./LandingPage.scss";
 
 const LandingPage: FunctionComponent = () => {
   const scrollCtx = useContext(ScrollContext);
-  const classes = "landing " + (scrollCtx.scroll ? "night" : "");
+  const classes = "landing" + (scrollCtx.scroll ? " night" : "");
 
   return (
     <section className={classes}>
