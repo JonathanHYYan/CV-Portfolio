@@ -1,38 +1,30 @@
+import { useState, useEffect } from "react";
 import "./Skills.scss";
 
-var skill = document.getElementById('skill1');
-
-function fadeOutOnScroll(element: HTMLElement|null) {
-  if (!element) {
-    return;
-  }
-  
-  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
-  var elementHeight = element.offsetHeight;
-  var scrollTop = document.documentElement.scrollTop;
-  
-  var opacity = 1;
-  
-  if (scrollTop > distanceToTop) {
-    opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
-  }
-  
-  if (opacity >= 0) {
-    element.style.opacity = opacity.toString();
-  }
-}
-
-function scrollHandler() {
-  fadeOutOnScroll(skill);
-}
-
-window.addEventListener('scroll', scrollHandler);
+const DummyData= [{},{},{},{},{},{}]
 
 const Skills = () => {
+  const [scroll, setScroll] = useState(false);
 
+
+  useEffect(() =>{
+    const skillSection = document.getElementById('skills');
+    const sectionTop = skillSection?.offsetTop;
+    const sectionHeight = skillSection?.clientHeight;
+    const scrollBreakPoint = sectionHeight!/DummyData.length;
+    console.log(sectionTop);
+    console.log(sectionHeight);
+    console.log(scrollBreakPoint);
+
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > sectionTop! + scrollBreakPoint)
+    })
+  },[])
+
+  const scrollCondition = scroll ? "skill-card skill-card-1 slide-out" : "skill-card skill-card-1";
 
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <div className="image-container" id="imageContainer">
         <div className="skill-card skill-card-6" id="skill6">
           TypeScript
@@ -49,7 +41,7 @@ const Skills = () => {
         <div className="skill-card skill-card-2" id="skill2">
           CSS
         </div>
-        <div className="skill-card skill-card-1" id="skill1">
+        <div className={scrollCondition} id="skill1">
           HTML
         </div>
       </div>
