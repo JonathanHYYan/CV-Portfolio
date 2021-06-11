@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useReducer } from "react";
 import "./Skills.scss";
 
 const DummyData = [
@@ -34,54 +34,114 @@ const DummyData = [
   },
 ];
 
+const defaultScrollState = {
+  scroll1: false,
+  scroll2: false,
+  scroll3: false,
+  scroll4: false,
+  scroll5: false,
+  scroll6: false,
+};
+
+const scrollReducer = (state: any, action: any) => {
+  if (action.type === "1") {
+    const updatedScroll1 = !state.scroll1;
+    return { ...state, scroll1: updatedScroll1 };
+  }
+  if (action.type === "2") {
+    const updatedScroll2 = !state.scroll2;
+    return { ...state, scroll2: updatedScroll2 };
+  }
+  if (action.type === "3") {
+    const updatedScroll3 = !state.scroll3;
+    return { ...state, scroll3: updatedScroll3 };
+  }
+  if (action.type === "4") {
+    const updatedScroll4 = !state.scroll4;
+    return { ...state, scroll4: updatedScroll4 };
+  }
+  if (action.type === "5") {
+    const updatedScroll5 = !state.scroll5;
+    return { ...state, scroll5: updatedScroll5 };
+  }
+  if (action.type === "6") {
+    const updatedScroll6 = !state.scroll6;
+    return { ...state, scroll6: updatedScroll6 };
+  }
+  return state;
+};
+
 const Skills = () => {
-  const [scroll1, setScroll1] = useState(false);
-  const [scroll2, setScroll2] = useState(false);
-  const [scroll3, setScroll3] = useState(false);
-  const [scroll4, setScroll4] = useState(false);
-  const [scroll5, setScroll5] = useState(false);
-  const [scroll6, setScroll6] = useState(false);
+  const [scrollState, dispatchBreakPoint] = useReducer(
+    scrollReducer,
+    defaultScrollState
+  );
 
   useEffect(() => {
     const skillSection = document.getElementById("skills");
     const sectionTop = skillSection?.offsetTop;
     const sectionHeight = skillSection?.clientHeight;
     const scrollBreakPoint = sectionHeight! / DummyData.length;
-    const scrollStartModifyer = 0.6;
-    const scrollAmountModifyer = 0.8;
+    const scrollStartModifyer = 0.6 * sectionTop!;
+    const scrollAmountModifyer = 0.8 * scrollBreakPoint;
 
     window.addEventListener("scroll", () => {
-      setScroll1(
-        window.scrollY > scrollStartModifyer*sectionTop! + scrollAmountModifyer*(scrollBreakPoint * DummyData[0].num)
-      );
-      setScroll2(
-        window.scrollY > scrollStartModifyer*sectionTop! + scrollAmountModifyer*(scrollBreakPoint * DummyData[1].num)
-      );
-      setScroll3(
-        window.scrollY > scrollStartModifyer*sectionTop! + scrollAmountModifyer*(scrollBreakPoint * DummyData[2].num)
-      );
-      setScroll4(
-        window.scrollY > scrollStartModifyer*sectionTop! + scrollAmountModifyer*(scrollBreakPoint * DummyData[3].num)
-      );
-      setScroll5(
-        window.scrollY > scrollStartModifyer*sectionTop! + scrollAmountModifyer*(scrollBreakPoint * DummyData[4].num)
-      );
-      setScroll6(
-        window.scrollY > scrollStartModifyer*sectionTop! + scrollAmountModifyer*(scrollBreakPoint * DummyData[5].num)
-      );
+      if (
+        window.scrollY >
+        scrollStartModifyer! + scrollAmountModifyer * DummyData[0].num
+      ) {
+        dispatchBreakPoint({ type: "1" });
+      }
+      if (
+        window.scrollY >
+        scrollStartModifyer + scrollAmountModifyer * DummyData[1].num
+      ) {
+        dispatchBreakPoint({ type: "2" });
+      }
+      if (
+        window.scrollY >
+        scrollStartModifyer + scrollAmountModifyer * DummyData[2].num
+      ) {
+        dispatchBreakPoint({ type: "3" });
+      }
+      if (
+        window.scrollY >
+        scrollStartModifyer + scrollAmountModifyer * DummyData[3].num
+      ) {
+        dispatchBreakPoint({ type: "4" });
+      }
+      if (
+        window.scrollY >
+        scrollStartModifyer + scrollAmountModifyer * DummyData[4].num
+      ) {
+        dispatchBreakPoint({ type: "5" });
+      }
+      if (
+        window.scrollY >
+        scrollStartModifyer + scrollAmountModifyer * DummyData[5].num
+      ) {
+        dispatchBreakPoint({ type: "6" });
+      }
     });
   }, []);
 
-  const scrollCondition1 = scroll1 ? "slide-out" : "";
-  const scrollCondition2 = scroll2 ? "slide-out" : "";
-  const scrollCondition3 = scroll3 ? "slide-out" : "";
-  const scrollCondition4 = scroll4 ? "slide-out" : "";
-  const scrollCondition5 = scroll5 ? "slide-out" : "";
-  const scrollCondition6 = scroll6 ? "slide-out" : "";
+  const scrollCondition1 = scrollState.scroll1 ? "slide-out" : "";
+  const scrollCondition2 = scrollState.scroll2 ? "slide-out" : "";
+  const scrollCondition3 = scrollState.scroll3 ? "slide-out" : "";
+  const scrollCondition4 = scrollState.scroll4 ? "slide-out" : "";
+  const scrollCondition5 = scrollState.scroll5 ? "slide-out" : "";
+  const scrollCondition6 = scrollState.scroll6 ? "slide-out" : "";
 
-  const conditionHolder=[scrollCondition1,scrollCondition2,scrollCondition3,scrollCondition4,scrollCondition5,scrollCondition6]
+  const conditionHolder = [
+    scrollCondition1,
+    scrollCondition2,
+    scrollCondition3,
+    scrollCondition4,
+    scrollCondition5,
+    scrollCondition6,
+  ];
 
-  const skillList = DummyData.map((skill,index) => (
+  const skillList = DummyData.map((skill, index) => (
     <div
       className={`skill-card skill-card-${skill.num} ` + conditionHolder[index]}
       id={`skill${skill.num}`}
