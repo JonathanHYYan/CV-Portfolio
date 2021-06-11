@@ -48,7 +48,7 @@ const Skills = () => {
     const sectionHeight = skillSection?.clientHeight;
     const scrollBreakPoint = sectionHeight! / DummyData.length;
     const scrollStartModifyer = 0.6;
-    const scrollAmountModifyer = 0.9;
+    const scrollAmountModifyer = 0.8;
 
     window.addEventListener("scroll", () => {
       setScroll1(
