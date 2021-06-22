@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
 import { useState, useEffect } from "react";
 import ScrollContext from "../../store/context";
+import Footer from "./Footer";
 
 const Layout = (props: any) => {
   const [scroll, setScroll] = useState(false);
@@ -21,6 +22,7 @@ const Layout = (props: any) => {
       <main>
         {scroll && <NavBar />}
         {props.children}
+        <Footer/>
       </main>
     </ScrollContext.Provider>
   );
