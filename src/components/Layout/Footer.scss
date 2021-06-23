@@ -8,6 +8,8 @@
   width: 100%;
 
   h3 {
+    display: flex;
+    align-items: center;
     font-size: 3.5rem;
   }
 
@@ -18,6 +20,7 @@
 
   .socials {
     width: 60%;
+    border-right: 2px white;
     & p {
       font-size: 0.8rem;
     }

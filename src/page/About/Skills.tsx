@@ -28,7 +28,6 @@ const Skills = () => {
         }
         return scrollPoint;
       });
-      console.log(updatedScrollPoints);
       setScrollPoints(updatedScrollPoints);
     });
   }, []);

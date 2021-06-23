@@ -2,7 +2,7 @@
 
 .landing {
   width: 100%;
-  min-height: 100.5vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +24,7 @@
 }
 
 .name {
+
   text-align: center;
   color: $font-color;
   transform: translateY(-20%);
