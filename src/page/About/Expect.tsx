@@ -1,6 +1,7 @@
 import Card from "../../UI/Card";
 
 const Intro = () => {
+  
   const content = (
     <div>
       <Card>

@@ -33,30 +33,36 @@
   &-1 {
     background-color: red;
     position: absolute;
+    z-index: 6;
     transform: translate(-30%,30%);
   }
   &-2 {
     position: absolute;
     background-color: yellow;
+    z-index: 5;
     transform: translate(-20%,20%);
   }
   &-3 {
     position: absolute;
     background-color: green;
+    z-index: 4;
     transform: translate(-10%,10%);
   }
   &-4 {
     position: absolute;
     background-color: blue;
+    z-index: 3;
   }
   &-5 {
     position: absolute;
     background-color: black;
+    z-index: 2;
     transform: translate(10%,-10%);
   }
   &-6 {
     position: absolute;
     background-color: orange;
+    z-index: 1;
     transform: translate(20%,-20%);
   }
 
