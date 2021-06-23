@@ -1,0 +1,44 @@
+@import "../../config";
+
+.footer {
+  display: flex;
+  padding: 3em 2em 3em 2em;
+  background-color: $secondary-color;
+  color: white;
+  width: 100%;
+
+  h3 {
+    font-size: 3.5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 2em 0 2em 0;
+  }
+
+  .socials {
+    width: 60%;
+    & p {
+      font-size: 0.8rem;
+    }
+
+    & ul {
+      display: flex;
+      align-items: center;
+    }
+
+    & li {
+      margin: 0 1.5em 0 0;
+    }
+  }
+
+  .info {
+    display: flex;
+    align-items: stretch;
+    width: 40%;
+    & li {
+      font-size: 1.3rem;
+      padding-bottom: 1em;
+    }
+  }
+}

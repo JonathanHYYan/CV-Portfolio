@@ -20,11 +20,6 @@ const Skills = () => {
 
     window.addEventListener("scroll", () => {
       const updatedScrollPoints = scrollPoints.map((scrollPoint, index) => {
-        console.log(
-          index,
-          window.scrollY,
-          scrollStartModifyer + scrollAmountModifyer * (index + 1)
-        );
         if (
           window.scrollY >
           scrollStartModifyer + scrollAmountModifyer * (index + 1)
