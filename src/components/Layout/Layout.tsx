@@ -4,32 +4,23 @@ import ScrollContext from "../../store/context";
 
 const Layout = (props: any) => {
   const [scroll, setScroll] = useState(false);
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-  
   if(!scroll) {
-    window.onscroll = function(){
-    window.scrollTo(scrollLeft, scrollTop)};
+    document.body.style.overflow = "hidden";
+  } else {
+    setTimeout(function() {
+      document.body.style.overflow = "visible";
+    }, 2000)
   }
 
   useEffect(() => {
     window.addEventListener("wheel", (e) => {
-     if(e.deltaY){
-      setScroll(true)
-      setTimeout(function() {
-        window.onscroll = function() {};
-      }, 2500)
-      
-    }
-    });
-    setTimeout(function () {
-      if (!scroll) {
+      if (e.deltaY) {
         setScroll(true);
-        window.onscroll = function() {};
       }
-    }, 3000);
+    });
   }, []);
 
+  
   return (
     <ScrollContext.Provider value={{ scroll: scroll }}>
       <main>
