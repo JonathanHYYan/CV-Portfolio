@@ -20,7 +20,7 @@
 
   .socials {
     width: 60%;
-    border-right: 2px white;
+    border-right: 2px solid white;
     & p {
       font-size: 0.8rem;
     }
@@ -37,8 +37,9 @@
 
   .info {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     width: 40%;
+    padding-left: 5%;
     & li {
       font-size: 1.3rem;
       padding-bottom: 1em;

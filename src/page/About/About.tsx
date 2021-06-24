@@ -19,7 +19,7 @@ const About = () => {
   const rightContent = <Skills />;
 
   return (
-    <section className='about'>
+    <section id="about"className='about'>
       <div className="half-page">{scroll && leftContent}</div>
       <div className="half-page">{scroll && rightContent}</div>
     </section>

@@ -9,7 +9,7 @@ const Form = () => {
   return (
     <>
       {scroll && (
-        <section>
+        <section id="contact-form">
           <Card>
             <form>
               <h2>Form</h2>

@@ -9,7 +9,7 @@ const Layout = (props: any) => {
   } else {
     setTimeout(function() {
       document.body.style.overflow = "visible";
-    }, 2000)
+    }, 1500)
   }
 
   useEffect(() => {

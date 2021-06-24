@@ -1,14 +1,42 @@
 import "./NavBar.scss";
+import { Link as Scrollto} from "react-scroll";
 
 const NavBar = () => {
   return (
     <nav className="nav">
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Work</li>
-        <li>Contact</li>
-      </ul>
+      <Scrollto
+        to="landingPage"
+        spy={true}
+        smooth={true}
+        duration={400}
+        className="links"
+        activeClass="active-links"
+      >
+        Home
+      </Scrollto>
+      <Scrollto
+        to="about"
+        spy={true}
+        smooth={true}
+        duration={400}
+        className="links"
+        activeClass="active-links"
+      >
+        About
+      </Scrollto>
+      {/* <li>
+        Work
+      </li> */}
+      <Scrollto
+        to="contact-form"
+        spy={true}
+        smooth={true}
+        duration={400}
+        className="links"
+        activeClass="active-links"
+      >
+        Contact
+      </Scrollto>
     </nav>
   );
 };

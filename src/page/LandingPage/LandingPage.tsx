@@ -7,11 +7,11 @@ const LandingPage: FunctionComponent = () => {
   const classes = "landing" + (scrollCtx.scroll ? " night" : "");
 
   return (
-    <section className={classes}>
-      <div className="name">
+    <section id="landingPage" className={classes}>
+      <header className="name">
         <h1>I'm John</h1>
         <h2 className={"hidden-header"}>a web developer</h2>
-      </div>
+      </header>
     </section>
   );
 };

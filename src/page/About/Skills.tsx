@@ -10,7 +10,7 @@ const Skills = () => {
 
   useEffect(() => {
     const skillSection = document.getElementById("skills");
-    const sectionTop = skillSection ? skillSection.offsetTop : null;
+    const sectionTop = skillSection ? skillSection.offsetTop*1.3 : null;
     const sectionHeight = skillSection ? skillSection.clientHeight : null;
     const scrollBreakPoint = sectionHeight
       ? sectionHeight / skillData.length
