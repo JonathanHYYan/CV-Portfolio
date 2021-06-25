@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Skills.scss";
 import { DummyData } from "./DummyData";
 
-const skillData = DummyData;
+const skillData = DummyData.reverse();
 
 const Skills = () => {
   const initialScrollPoints = new Array(skillData.length).fill(false);
@@ -10,7 +10,7 @@ const Skills = () => {
 
   useEffect(() => {
     const skillSection = document.getElementById("skills");
-    const sectionTop = skillSection ? skillSection.offsetTop*1.3 : null;
+    const sectionTop = skillSection ? skillSection.offsetTop * 1.3 : null;
     const sectionHeight = skillSection ? skillSection.clientHeight : null;
     const scrollBreakPoint = sectionHeight
       ? sectionHeight / skillData.length
@@ -38,11 +38,24 @@ const Skills = () => {
     conditionHolder.push(breakPoint ? "slide-out" : "");
   });
 
+  const triggerPoint = conditionHolder.reverse();
+
   const skillList = skillData.map((skill, index) => (
     <div
-      className={`skill-card skill-card-${index + 1} ${
-        scrollPoints[index] ? "slide-out" : ""
-      }`}
+      style={{
+        display:"flex",
+        justifyContent: "center",
+        alignItems: "center",
+        position:"absolute",
+        width: "20em",
+        height: "20em",
+        borderRadius: "15%",
+        transition: "all 2.5s ease",
+        content: "",
+        padding: "10%",
+        backgroundColor:`${skillData[index].color}`,
+        transform: triggerPoint[index] ? `translate(${10-index*10}%, -1000%)` : `translate(${10-index*10}%, ${-50+index*10}%)`
+      }}
       id={`skill${index + 1}`}
     >
       {skill.name}
