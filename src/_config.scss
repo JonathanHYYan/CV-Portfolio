@@ -1,6 +1,12 @@
+@font-face{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'EB Garamond', serif;
+  src: url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Noto+Sans+JP:wght@100&display=swap');
+}
+
 $primary-color: #758286;
 $secondary-color: #272727;
-$font-color: rgb(26, 184, 196);
+$highlight-color: rgb(26, 184, 196);
 $font-weights: (
   "regular": 400,
   "medium": 500,
@@ -36,4 +42,10 @@ $font-weights: (
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1, h3 {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
 }

@@ -10,7 +10,7 @@ const NavBar = () => {
         smooth={true}
         duration={400}
         className="links"
-        activeClass="active-links"
+        activeClass="links-active"
       >
         Home
       </Scrollto>
@@ -20,7 +20,7 @@ const NavBar = () => {
         smooth={true}
         duration={400}
         className="links"
-        activeClass="active-links"
+        activeClass="links-active"
       >
         About
       </Scrollto>
@@ -33,7 +33,7 @@ const NavBar = () => {
         smooth={true}
         duration={400}
         className="links"
-        activeClass="active-links"
+        activeClass="links-active"
       >
         Contact
       </Scrollto>
