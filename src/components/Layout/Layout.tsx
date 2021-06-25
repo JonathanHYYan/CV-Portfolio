@@ -18,6 +18,11 @@ const Layout = (props: any) => {
         setScroll(true);
       }
     });
+    setTimeout(function() {
+      if(!scroll){
+        setScroll(true);
+      }
+    },2000)
   }, []);
 
   
