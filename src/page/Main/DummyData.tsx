@@ -2,31 +2,37 @@ export const DummyData = [
   {
     id: "s1",
     name: "HTML",
-    color:"red",
+    color:"#D94625",
+    textColor: "#FFFFFF",
   },
   {
     id: "s2",
     name: "CSS",
-    color: "yellow"
+    color: "#2168A6",
+    textColor: "#FFFFFF",
   },
   {
     id: "s3",
     name: "SCSS",
-    color: "green"
+    color: "#CD669A",
+    textColor: "#FFFFFF",
   },
   {
     id: "s4",
     name: "JavaScript",
-    color: "blue",
+    color: "#F0DB4F",
+    textColor: "#323330",
   },
   {
     id: "s5",
     name: "React",
-    color:"black",
+    color:"#61DBFB",
+    textColor: "#FFFFFF",
   },
   {
     id: "s6",
     name: "Typescript",
-    color: "orange",
+    color: "#007ACC",
+    textColor: "#FFFFFF",
   },
 ];

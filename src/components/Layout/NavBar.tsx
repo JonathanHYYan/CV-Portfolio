@@ -15,7 +15,7 @@ const NavBar = () => {
         Home
       </Scrollto>
       <Scrollto
-        to="about"
+        to="main"
         spy={true}
         smooth={true}
         duration={400}

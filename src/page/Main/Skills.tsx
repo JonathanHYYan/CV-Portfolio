@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import "./Skills.scss";
 import { DummyData } from "./DummyData";
 
-const skillData = DummyData.reverse();
+const skillData = DummyData;
+const renderOrder = skillData.reverse();
 
 const Skills = () => {
   const initialScrollPoints = new Array(skillData.length).fill(false);
@@ -40,21 +41,24 @@ const Skills = () => {
 
   const triggerPoint = conditionHolder.reverse();
 
-  const skillList = skillData.map((skill, index) => (
+  const skillList = renderOrder.map((skill, index) => (
     <div
       style={{
         display:"flex",
         justifyContent: "center",
         alignItems: "center",
         position:"absolute",
-        width: "20em",
-        height: "20em",
+        width: "6em",
+        height: "6em",
         borderRadius: "15%",
         transition: "all 2.5s ease",
         content: "",
         padding: "10%",
+        fontSize: "3rem",
+        fontWeight: "bold",
+        color: `${skillData[index].textColor}`,
         backgroundColor:`${skillData[index].color}`,
-        transform: triggerPoint[index] ? `translate(${10-index*10}%, -1000%)` : `translate(${10-index*10}%, ${-50+index*10}%)`
+        transform: triggerPoint[index] ? `translate(${10-index*10}%, -1000%)` : `translate(${10-index*10}%, ${-45+index*10}%)`
       }}
       id={`skill${index + 1}`}
     >

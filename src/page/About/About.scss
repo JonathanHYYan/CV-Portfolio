@@ -1,4 +1,25 @@
+@import "../../config";
+
 .about {
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 20em;
+  position: relative;
+  &-title {
+    position: absolute;
+    color: $secondary-color;
+    top: 5%;
+    left: -15%;
+    font-size: 10rem;
+    font-weight: 1000;
+    opacity: 0.5;
+  }
+
+  &-me {
+    position: absolute;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }
