@@ -6,6 +6,18 @@
   height: 100%;
   flex-direction: column;
   align-items: center;
+
+  &-icon {
+    display:"flex";
+    justify-content: "center";
+    align-items: "center";
+    position:"absolute";
+    width: 2em;
+    height: 2em;
+    border-radius: 15%;
+    font-size: 1rem;
+    font-weight: "bold";
+  }
 }
 
 .image-container {

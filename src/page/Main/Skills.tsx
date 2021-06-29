@@ -43,22 +43,12 @@ const Skills = () => {
 
   const skillList = renderOrder.map((skill, index) => (
     <div
+      className="skills-icon"
       style={{
-        display:"flex",
-        justifyContent: "center",
-        alignItems: "center",
-        position:"absolute",
-        width: "6em",
-        height: "6em",
-        borderRadius: "15%",
         transition: "all 2.5s ease",
-        content: "",
-        padding: "10%",
-        fontSize: "3rem",
-        fontWeight: "bold",
         color: `${skillData[index].textColor}`,
         backgroundColor:`${skillData[index].color}`,
-        transform: triggerPoint[index] ? `translate(${10-index*10}%, -1000%)` : `translate(${10-index*10}%, ${-45+index*10}%)`
+        transform: triggerPoint[index] ? `translate(${-60+index*10}%, -1000%)` : `translate(${-60+index*10}%, ${-45-index*10}%)`
       }}
       id={`skill${index + 1}`}
     >

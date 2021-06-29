@@ -1,4 +1,3 @@
-import { transform } from "typescript";
 import "./About.scss";
 
 const About = () => {

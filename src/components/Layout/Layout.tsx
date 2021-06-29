@@ -23,6 +23,7 @@ const Layout = (props: any) => {
         setScroll(true);
       }
     },2000)
+    
   }, []);
 
   
