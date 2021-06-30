@@ -9,7 +9,6 @@
   margin: 1em;
   box-shadow: 0 2px 8px $primary-color;
   border-radius: 6px;
-  background-color: white;
   margin: 10em 3em 5em 3em;
   padding: 2.5em;
 
@@ -17,5 +16,7 @@
     padding: 0 0 0.5em 0;
   }
 
-
+  &-text {
+    text-align: center;
+  }
 }

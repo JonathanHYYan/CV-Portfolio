@@ -6,16 +6,7 @@ const TechStack = () => {
       <Card>
         <h2 className="card-title">Tech Stack</h2>
         <p className="card-text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro vero
-          sit in qui, numquam voluptatibus neque dolore aliquid, alias velit
-          sequi odio nemo? Blanditiis, animi provident ipsa officiis recusandae
-          impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-          laborum, veniam rerum minima veritatis dolorum? Ipsa ad aut voluptatum
-          voluptate assumenda, aperiam sunt, enim, excepturi provident culpa
-          amet animi labore? Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Minima, doloremque. Nihil debitis accusantium quaerat, sint,
-          officiis architecto ipsum numquam reiciendis enim molestias vel fuga
-          animi deserunt dolores est. Nesciunt, velit.
+          I use multiple technologies such as HTML, CSS and JavaScript coupled with superscripts like TypeScript and SCSS/SASS. For data management I use MongoDB or Firebase. 
         </p>
       </Card>
     </div>

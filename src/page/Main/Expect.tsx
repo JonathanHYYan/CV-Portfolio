@@ -7,16 +7,7 @@ const Intro = () => {
       <Card>
         <h2 className="card-title">What to Expect?</h2>
         <p className="card-text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro vero
-          sit in qui, numquam voluptatibus neque dolore aliquid, alias velit
-          sequi odio nemo? Blanditiis, animi provident ipsa officiis recusandae
-          impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-          laborum, veniam rerum minima veritatis dolorum? Ipsa ad aut voluptatum
-          voluptate assumenda, aperiam sunt, enim, excepturi provident culpa
-          amet animi labore? Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Minima, doloremque. Nihil debitis accusantium quaerat, sint,
-          officiis architecto ipsum numquam reiciendis enim molestias vel fuga
-          animi deserunt dolores est. Nesciunt, velit.
+          Imagine, design and create. Let's talk about the aesthetics and features that best represent you and your goals. 
         </p>
       </Card>
     </div>

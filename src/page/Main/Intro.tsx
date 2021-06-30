@@ -4,18 +4,9 @@ const Intro = () => {
   const content = (
     <div>
       <Card>
-        <h2 className="card-title">Web Dev Text</h2>
+        <h2 className="card-title">What I Do</h2>
         <p className="card-text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro vero
-          sit in qui, numquam voluptatibus neque dolore aliquid, alias velit
-          sequi odio nemo? Blanditiis, animi provident ipsa officiis recusandae
-          impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-          laborum, veniam rerum minima veritatis dolorum? Ipsa ad aut voluptatum
-          voluptate assumenda, aperiam sunt, enim, excepturi provident culpa
-          amet animi labore? Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Minima, doloremque. Nihil debitis accusantium quaerat, sint,
-          officiis architecto ipsum numquam reiciendis enim molestias vel fuga
-          animi deserunt dolores est. Nesciunt, velit.
+        "I help you design graphical interfaces on websites to produce clear intuitive experiences with a variety of web technologies that can be viewed on any device to meet both you and your clients needs." 
         </p>
       </Card>
     </div>
