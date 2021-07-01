@@ -2,11 +2,8 @@
 
 .card {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 1em;
-  margin: 1em;
+  align-items: center;
   box-shadow: 0 2px 8px $primary-color;
   border-radius: 6px;
   margin: 10em 3em 5em 3em;

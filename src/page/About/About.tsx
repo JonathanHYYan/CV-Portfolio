@@ -8,11 +8,7 @@ interface Props {
 }
 
 const AboutMeTitle = styled.div<Props>`
-  transition: transform 0.5s ease-out;
-  position: absolute;
-  top:5%;
-  left:-15%;
-  transform: translateX(${({scrollPercent}) => (scrollPercent)}%)
+  transform: translateX(${({ scrollPercent }) => -100 + scrollPercent}%);
 `;
 
 const About = () => {
@@ -20,22 +16,22 @@ const About = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-  },[])
+  }, []);
 
-  const handleScroll = (event:any) => {
-    console.log(window.scrollY)
-    setScrollAmount(window.scrollY*0.1)
-  }
+  const handleScroll = (event: any) => {
+    console.log(window.scrollY);
+    setScrollAmount(window.scrollY * 0.1);
+  };
 
   return (
     <section id="about" className="about">
-      <AboutMeTitle scrollPercent={scrollAmount} className="about-title">
-        About Me
-      </AboutMeTitle>
-      <div className="about-me">
-        Clean, dynamic Front-end developer creating memorable and smooth user
-        experiences
-      </div>
+        <div className="about-image"></div>
+        <AboutMeTitle scrollPercent={scrollAmount} className="about-title">
+          About Me
+        </AboutMeTitle>
+        <div className="about-me">
+          Front-end developer creating memorable and smooth user experiences
+        </div>
     </section>
   );
 };

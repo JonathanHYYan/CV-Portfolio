@@ -7,17 +7,43 @@
   height: 20em;
   position: relative;
 
+  &::before {
+    opacity: 0;
+    transition: 5s;
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom:0px;
+    left:0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/dummyAboutMePic.jpg);
+  }
+
+  &:hover::before{
+    transition: 5s;
+    opacity: 1;
+  }
+
   &-title {
-    color: $secondary-color;
+    color: #fff;
     font-size: 10rem;
     font-weight: 1000;
-    opacity: 0.5;
+    opacity: 0.05;
+    transition: transform 800ms ease;
   }
 
   &-me {
     position: absolute;
-    color: #fff;
-    font-size: 1.5rem;
+    color: $highlight-color;
+    font-size: 2rem;
     font-weight: bold;
+
+    &:before {
+      opacity: 1;
+    }
   }
 }
+
