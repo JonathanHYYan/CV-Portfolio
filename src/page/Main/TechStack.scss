@@ -1,6 +1,20 @@
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .react-logos {
   height: 5em;
   width: 5em;
   color: white;
   padding-left: 1rem;
+  animation: 20s ease-in slideIn;
+}
+
+.tech-hero {
+  position: absolute;
+  transform: translate(350%, -25%);
 }

@@ -10,10 +10,22 @@
   padding: 2.5em;
 
   &-title {
-    padding: 0 0 0.5em 0;
+    padding: 0 0 0.75em 0;
+    border-bottom: 2px solid $highlight-color;
   }
 
   &-text {
-    text-align: center;
+    padding: 1.5em;
+    font-weight: "regular";
+    text-align: left;
+    width: 80%;
+    max-width: 1200px;
+    line-height: 2;
+  }
+
+  span {
+    color: $highlight-color;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 }

@@ -1,6 +1,21 @@
 .main {
   display: flex;
+  justify-content: center;
+  position: relative;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin: auto;
+  padding-top: 5em;
+
+  &:before {
+    content: "";
+    position: absolute;
+    opacity: 0.05;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../../images/backgound.JPG);
+    background-size: cover;
+  }
 }
