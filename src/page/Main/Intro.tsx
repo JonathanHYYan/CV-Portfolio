@@ -1,11 +1,29 @@
+import { useState } from "react";
 import Card from "../../UI/Card";
 import "./Intro.scss";
 
 const Intro = () => {
+  const tvTabletIcon = document.getElementById("iconLeft");
+  const [tvIconToggle, setTvIconToggle] = useState(true);
+
+
+  // const toggleClick = () => {
+  //   setTvIconToggle(!tvIconToggle)
+  // }
+  const iconToggleLoop = () => {
+    setTimeout(() => {
+        setTvIconToggle(!tvIconToggle);
+    }, 2500)
+  }
+
+  iconToggleLoop();
+
+  const leftIconToggle = tvIconToggle ? "left-icon" : "left-icon toggled";
+
   const content = (
     <div style={{display: "block"}}>
       <Card>
-        <div className="tv icon"></div>
+        <div id="iconLeft" className={leftIconToggle} ></div>
         <div className="tablet icon"></div>
         <h2 className="card-title">What I Do</h2>
         <p className="card-text">

@@ -19,7 +19,6 @@ const About = () => {
   }, []);
 
   const handleScroll = (event: any) => {
-    console.log(window.scrollY);
     setScrollAmount(window.scrollY * 0.1);
   };
 

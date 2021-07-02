@@ -1,71 +1,77 @@
+@import "../../config";
 // Monitor ---------------------------------
-.tv.icon {
+.left-icon {
   color: #000;
   position: absolute;
-  margin-left: -500px;
-  margin-top: -100px;
+  margin-left: -30em;
+  margin-top: -8em;
   width: 213px;
   height: 140px;
-  border-radius: 2px;
+  border-radius: 5%;
   border: solid 5px currentColor;
   background-color: red;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 85px;
+    bottom: -35px;
+    width: 30px;
+    height: 30px;
+    background-color: currentColor;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 63px;
+    bottom: -40px;
+    width: 70px;
+    height: 10px;
+    background-color: currentColor;
+    border: solid 2px currentColor;
+    border-radius: 5px;
+  }
+
+  &.toggled {
+    position: absolute;
+    margin-left: -30em;
+    margin-top: -8em;
+    width: 125px;
+    height: 140px;
+    border-top: solid 5px black;
+    border-bottom: solid 5px black;
+    border-radius: 0;
+    
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -13px;
+      height: 160px;
+      width: 120px;
+      border: solid 10px black;
+      background-color: $primary-color;
+      border-radius: 5%;
+      z-index: -1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -17.5px;
+      left: 50px;
+      width: 5px;
+      height: 5px;
+      border: solid 3px currentColor;
+      border-radius: 50%;
+    }
+  }
 }
 
-.tv.icon:before {
-  content: '';
-  position: absolute;
-  left: 96px;
-  bottom: -35px;
-  width: 10px;
-  height: 30px;
-  background-color: currentColor;
-}
-
-.tv.icon:after {
-  content: '';
-  position: absolute;
-  left: 30px;
-  bottom: -40px;
-  width: 70px;
-  height: 10px;
-  background-color: currentColor;
-  border: solid 2px currentColor;
-  border-radius: 5px;
-}
-
-// Tablet-----------------------------------------------
-
-.tablet.icon {
-  color: #000;
-  position: absolute;
-  margin-left: 2px;
-  margin-top: 1px;
-  width: 120px;
-  height: 140px;
-  border-top: solid 5px currentColor;
-  border-bottom: solid 5px currentColor;
-  background-color: red;
-}
-
-.tablet.icon:before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -10px;
-  height: 160px;
-  width: 120px;
-  border: solid 10px currentColor;
-  border-radius: 5%;
-}
-
-.tablet.icon:after {
-  content: '';
-  position: absolute;
-  bottom: -17.5px;
-  left: 70px;
-  width: 5px;
-  height: 5px;
-  border: solid 3px currentColor;
-  border-radius: 50%;
+.left-icon, .left-icon:before, .left-icon:after, .left-icon toggle,
+.left-icon toggle:before, .left-icon toggle:after {
+  transition: all 0.4s ease;
 }
 
