@@ -3,28 +3,26 @@ import Card from "../../UI/Card";
 import "./Intro.scss";
 
 const Intro = () => {
-  const tvTabletIcon = document.getElementById("iconLeft");
   const [tvIconToggle, setTvIconToggle] = useState(true);
+  const [phoneIconToggle, setPhoneIcontoggle] = useState(true);
 
-
-  // const toggleClick = () => {
-  //   setTvIconToggle(!tvIconToggle)
-  // }
   const iconToggleLoop = () => {
     setTimeout(() => {
         setTvIconToggle(!tvIconToggle);
-    }, 2500)
+        setPhoneIcontoggle(!phoneIconToggle)
+    }, 4000)
   }
 
   iconToggleLoop();
 
   const leftIconToggle = tvIconToggle ? "left-icon" : "left-icon toggled";
+  const rightIconToggle = phoneIconToggle ?  "right-icon" : "right-icon toggled";
 
   const content = (
     <div style={{display: "block"}}>
       <Card>
-        <div id="iconLeft" className={leftIconToggle} ></div>
-        <div className="tablet icon"></div>
+        <div className={leftIconToggle} ></div>
+        <div className={rightIconToggle}></div>
         <h2 className="card-title">What I Do</h2>
         <p className="card-text">
         "I help you design graphical interfaces on websites to produce clear intuitive experiences with a variety of web technologies that can be viewed on any device to meet both you and your clients needs." 

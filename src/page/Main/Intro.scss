@@ -1,10 +1,10 @@
 @import "../../config";
-// Monitor ---------------------------------
+// Left ---------------------------------
 .left-icon {
   color: #000;
   position: absolute;
   margin-left: -30em;
-  margin-top: -8em;
+  margin-top: -9em;
   width: 213px;
   height: 140px;
   border-radius: 5%;
@@ -36,9 +36,9 @@
   &.toggled {
     position: absolute;
     margin-left: -30em;
-    margin-top: -8em;
-    width: 125px;
-    height: 140px;
+    margin-top: -7em;
+    width: 105px;
+    height: 100px;
     border-top: solid 5px black;
     border-bottom: solid 5px black;
     border-radius: 0;
@@ -49,8 +49,8 @@
       position: absolute;
       top: -20px;
       left: -13px;
-      height: 160px;
-      width: 120px;
+      height: 120px;
+      width: 100px;
       border: solid 10px black;
       background-color: $primary-color;
       border-radius: 5%;
@@ -70,8 +70,78 @@
   }
 }
 
-.left-icon, .left-icon:before, .left-icon:after, .left-icon toggle,
-.left-icon toggle:before, .left-icon toggle:after {
+// Right---------------------------------------------------
+
+.right-icon {
+  color: #000;
+  position: absolute;
+  margin-left: 30em;
+  margin-top: -6em;
+  width: 50.625px;
+  height: 90px;
+  border-radius: 10%;
+  border: solid 5px currentColor;
+  background-color: red;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 17.5px;
+    top: 5px;
+    width: 5px;
+    height: 2.5px;
+    background-color: currentColor;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 19px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+
+  &.toggled {
+    color: #000;
+    position: absolute;
+    margin-left: 35em;
+    margin-top: -8.5em;
+    width: 213px;
+    height: 140px;
+    border-radius: 5%;
+    border: solid 10px currentColor;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -25px;
+      top: 140px;
+      bottom: 100px;
+      width: 240px;
+      height: 15px;
+      border-radius: 0 0 50% 50%;
+      border: solid 1px black;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 124px;
+      left: 180px;
+      height: 3px;
+      width: 3px;
+      border-radius: 50%;
+      background-color: red;
+    }
+  }
+}
+
+
+.left-icon, .left-icon:before, .left-icon:after, .right-icon, .right-icon:before, .right-icon:after {
   transition: all 0.4s ease;
 }
+
 
