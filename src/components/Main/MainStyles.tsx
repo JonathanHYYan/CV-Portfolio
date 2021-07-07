@@ -1,10 +1,8 @@
-.main {
-  display: flex;
-  justify-content: center;
+import styled from "styled-components";
+import backgroundImg from "../images/background.jpg";
+
+export const MainSection = styled.section`
   position: relative;
-  align-items: center;
-  width: 100%;
-  margin: auto;
   padding-top: 5em;
 
   &:before {
@@ -15,7 +13,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url(../../images/backgound.JPG);
+    background-image: url(${backgroundImg});
     background-size: cover;
   }
-}
+`;
+

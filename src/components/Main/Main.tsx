@@ -1,28 +1,26 @@
 import { useContext } from "react";
 import ScrollContext from "../../store/context";
-import Intro from "./Intro";
+import Intro from "./WhatIDo";
 import TechStack from "./TechStack";
 import Expect from "./Expect";
-import './Main.scss';
-
+import { MainSection } from "./MainStyles";
 
 const Main = () => {
   const scrollCtx = useContext(ScrollContext);
   const scroll = scrollCtx.scroll;
 
-  
-  const leftContent = (
-    <>
+  const content = (
+    <MainSection id="main">
       <Intro />
       <TechStack />
       <Expect />
-    </>
+    </MainSection>
   );
 
   return (
-    <section id="main"className='main'>
-      <div>{scroll && leftContent}</div>
-    </section>
+    <>
+      <div>{scroll && content}</div>
+    </>
   );
 };
 

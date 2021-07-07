@@ -1,19 +1,25 @@
 import Layout from "./components/Layout/Layout";
-import LandingPage from "./page/LandingPage/LandingPage";
-import Main from "./page/Main/Main";
-import Form from "./page/Form/Form";
-import Footer from "./components/Layout/Footer"
-import About from "./page/About/About";
+import LandingPage from "./components/Landing/Landing";
+import Main from "./components/Main/Main";
+import Form from "./components/Form/Form";
+import Footer from "./components/Footer/Footer";
+import About from "./components/About/About";
+import { ThemeProvider } from "styled-components";
+import {theme} from "./components/UI/themeStyles";
+
+
 
 function App() {
   return (
-    <Layout>
-      <LandingPage />
-      <About />
-      <Main />
-      <Form />
-      <Footer />
-    </Layout>
+    <ThemeProvider theme={theme}> 
+      <Layout>
+        <LandingPage />
+        <About />
+        <Main />
+        <Form />
+        <Footer />
+      </Layout>
+    </ThemeProvider>
   );
 }
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Skills.scss";
-import { DummyData } from "./DummyData";
+import { DummyData } from "../../API/DummyData";
 
 const skillData = DummyData;
 const renderOrder = skillData.reverse();

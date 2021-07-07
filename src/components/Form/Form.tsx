@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import ScrollContext from "../../store/context";
-import Card from "../../UI/Card";
+import {Card} from "../UI/Card";
 
 const Form = () => {
   const scrollCtx = useContext(ScrollContext);
