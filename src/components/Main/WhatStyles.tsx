@@ -1,9 +1,20 @@
 import styled from "styled-components";
-import { highlightColor, primaryColor } from "../UI/themeStyles";
+import { device, highlightColor, primaryColor } from "../UI/themeStyles";
 
 interface monToggle {
   deviceToggle: boolean;
 }
+
+export const DeviceWrapper = styled.div`
+  width: 80%;
+  position: relative;
+  height: 20vmin;
+
+  @media only ${device.mobileS} {
+    width:100%;
+    min-width: 400px;
+  }
+`;
 
 export const MonitorToTablet = styled.div<monToggle>`
   ${({ deviceToggle }) => (deviceToggle ? monitor : tablet)}
@@ -17,33 +28,32 @@ export const PhoneToLaptop = styled.div<monToggle>`
 const monitor = `
 color: #000;
 position: absolute;
-margin-left: -30em;
-margin-top: -9em;
-width: 213px;
-height: 140px;
+top:5%;
+left 20%;
+width: 20vw;
+padding: 5.625vw;
 border-radius: 5%;
-border: solid 5px black;
+border: solid 4px black;
 background-color: ${highlightColor};
 
 &:before {
   content: '';
   position: absolute;
-  left: 85px;
-  bottom: -35px;
-  width: 30px;
-  height: 30px;
-  background-color: currentColor;
+  top: 100%;
+  left: 42%;
+  width: 3vw;
+  height: 2vw;
+  background-color: black;
 }
 
 &:after {
   content: '';
   position: absolute;
-  left: 63px;
-  bottom: -40px;
-  width: 70px;
-  height: 10px;
+  top:115%;
+  left: 36%;
+  width: 5vw;
+  height: .7vw;
   background-color: currentColor;
-  border: solid 2px currentColor;
   border-radius: 5px;
 }
 `;
@@ -51,68 +61,65 @@ background-color: ${highlightColor};
 const tablet = `
 color: #000;
 position: absolute;
-margin-left: -30em;
-margin-top: -7em;
-width: 105px;
-height: 100px;
+left: 25%;
+top: 15%;
+width: 3.525vw;
+padding: 4.2vw;
 border-radius: 0;
-border-top: solid 5px black;
-border-bottom: solid 5px black;
+border: solid 0.4vw black;
 background-color: ${highlightColor};
-
 
 &:before {
   content: '';
   position: absolute;
-  top: -20px;
-  left: -8px;
-  height: 120px;
-  width: 100px;
-  border: solid 10px black;
+  transform: translate(-50%,-50%);
+  width: 8.5vw;
+  height: 11vw;
+  border: solid 0.4vw black;
   background-color: ${primaryColor};
   border-radius: 5%;
-  z-index: -1;
+  z-index: -10;
 }
 
 &:after {
   content: '';
   position: absolute;
-  bottom: -17.5px;
-  left: 40px;
-  width: 5px;
-  height: 5px;
-  border: solid 3px currentColor;
+  top: 9.25vw;
+  transform: translate(-50%,-50%);
+  width: 0.1vw;
+  height: 0.1vw;
+  border: solid 0.2vw currentColor;
   border-radius: 50%;
 }`;
 
 const phone = `
 color: #000;
 position: absolute;
-margin-left: 30em;
-margin-top: -6em;
-width: 50.625px;
-height: 90px;
+top: 30%;
+right: 25%;
+width: 3.5vw;
+height: 5.8vw;
 border-radius: 10%;
-border: solid 5px black;
+border: solid 0.3vw black;
 background-color: ${highlightColor};
 
 &:before {
   content: '';
   position: absolute;
-  left: 17.5px;
-  top: 5px;
-  width: 5px;
-  height: 2.5px;
+  left: 40%;
+  top: 5%;
+  width: 0.5vw;
+  height: 0.2vw;
   background-color: black;
 }
 
 &:after {
   content: '';
   position: absolute;
-  bottom: 5px;
-  left: 19px;
-  height: 5px;
-  width: 5px;
+  bottom: 3%;
+  left: 46%;
+  height: 0.4vw;
+  width: 0.4vw;
   border-radius: 50%;
   background-color: black;
 }
@@ -121,22 +128,21 @@ background-color: ${highlightColor};
 const laptop = `
 color: #000;
 position: absolute;
-margin-left: 35em;
-margin-top: -8.5em;
-width: 213px;
-height: 140px;
+right:20%;
+top: 10%;
+width: 13.8vw;
+height: 9.2vw;
 border-radius: 5%;
-border: solid 10px black;
+border: solid 0.65vw black;
 background-color: ${highlightColor};
 
 &:before {
   content: '';
   position: absolute;
-  left: -25px;
-  top: 140px;
-  bottom: 100px;
-  width: 240px;
-  height: 15px;
+  right: -14%;
+  top: 115%;
+  width: 15.5vw;
+  height: 0.95vw;
   border-radius: 0 0 50% 50%;
   border: solid 1px black;
   background-color: black;
@@ -145,10 +151,10 @@ background-color: ${highlightColor};
 &:after {
   content: '';
   position: absolute;
-  top: 124px;
-  left: 180px;
-  height: 3px;
-  width: 3px;
+  top: 8.1vw;
+  left: 11.5vw;
+  height: 0.2vw;
+  width: 0.2vw;
   border-radius: 50%;
   background-color: red;
 }

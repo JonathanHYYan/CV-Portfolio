@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { highlightColor, primaryColor } from "./themeStyles";
+import { device, highlightColor, primaryColor } from "./themeStyles";
 
 export const Card = styled.div`
   display: flex;
@@ -7,7 +7,7 @@ export const Card = styled.div`
   align-items: center;
   box-shadow: 0 2px 8px ${primaryColor};
   border-radius: 6px;
-  margin: 10em 3em 5em 3em;
+  margin: 10em 2.5% 5em 2.5%;
   padding: 2.5em;
 `;
 
@@ -20,9 +20,12 @@ export const CardText = styled.p`
   padding: 1.5em;
   font-weight: normal;
   text-align: center;
-  width: 80%;
   max-width: 1200px;
   line-height: 2;
+
+  @media only ${device.mobileS} {
+    width:100%;
+  }
 `;
 
 export const CardHighlight = styled.span`

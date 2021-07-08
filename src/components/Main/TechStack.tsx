@@ -1,10 +1,8 @@
-import {Card, CardTitle} from "../UI/Card";
-import { IconContext } from "react-icons";
-import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript } from "react-icons/io";
-import { IoLogoReact } from "react-icons/io5";
-import { SiSass, SiTypescript } from "react-icons/si";
+import {Card, CardTitle, CardText} from "../UI/Card";
 import "./TechStack.scss";
 import { useState } from "react";
+import {Html5, Css3, Javascript, Sass, Typescript, ReactLogo} from "@styled-icons/simple-icons";
+import { IconStyle } from "./TechStyles";
 
 
 const TechStack = () => {
@@ -26,7 +24,7 @@ const TechStack = () => {
       <br />
       ⊂(･_･)
       <br />
-      = ⊂二/
+      = ⊂二)
       <br />
       _ ᴸ \_|
     </span>
@@ -41,29 +39,26 @@ const TechStack = () => {
 
   iconToggleLoop();
 
-  const heroRun = heroState ? htmlStationary : htmlMoving;
+  const heroRun = heroState;
 
   return (
-    <IconContext.Provider value={{ className: "react-logos" }}>
       <Card>
         <CardTitle>Tech Stack</CardTitle>
-        
-        <p className="card-text">
+        <CardText>
           I use multiple technologies such as HTML, CSS and JavaScript coupled
           with superscripts like TypeScript and SCSS/SASS. For data management I
           use MongoDB or Firebase.
-        </p>
-        <div>
-          <IoLogoHtml5 className="logo-html" />
-          <IoLogoCss3 className="logo-css" />
-          <IoLogoJavascript className="logo-js" />
-          <SiSass className="logo-scss" />
-          <SiTypescript className="logo-ts" />
-          <IoLogoReact className="logo-react" />
-        </div>
+        </CardText>
+        <IconStyle>
+          <Html5 title="Html"/>
+          <Css3  title="Css"/>
+          <Javascript title="Javascript"/>
+          <Sass title="Sass"/>
+          <Typescript title="Typescript"/>
+          <ReactLogo title="React"/>
+        </IconStyle>
         <div>{heroRun}</div>
       </Card>
-    </IconContext.Provider>
   );
 };
 

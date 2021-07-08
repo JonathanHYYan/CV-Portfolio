@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import ScrollContext from "../../store/context";
-import { AboutMeTitle, AboutSection, AboutText } from "./AboutStyling";
+import { AboutMeTitle, AboutSection, AboutText } from "./AboutStyles";
 
 const About = () => {
   const [scrollAmount, setScrollAmount] = useState(0);
