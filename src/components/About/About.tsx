@@ -9,7 +9,6 @@ const About = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    console.log(scrollAmount);
   }, []);
 
   const handleScroll = (event: any) => {

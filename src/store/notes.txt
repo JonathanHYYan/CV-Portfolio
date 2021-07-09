@@ -17,3 +17,38 @@
 
 
 TS, html, css, sass react - simple icons
+
+ const htmlStationary = (
+    <span>
+      ∧_∧
+      <br />
+      (･_･)っ
+      <br />
+      (っ /
+      <br />
+      Lﾉ┘
+    </span>
+  );
+
+  const htmlMoving = (
+    <span>
+      = ∧_∧
+      <br />
+      ⊂(･_･)
+      <br />
+      = ⊂二)
+      <br />
+      _ ᴸ \_|
+    </span>
+  );
+  const [heroState, setHeroState] = useState(true);
+
+  const iconToggleLoop = () => {
+    setTimeout(() => {
+      setHeroState(!heroState);
+    }, 500);
+  };
+
+  iconToggleLoop();
+
+  const heroRun = heroState;
