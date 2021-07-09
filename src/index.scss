@@ -1,19 +1,27 @@
-@import "./config";
-
 body {
-  background-color: $primary-color;
+  background-color: rgb(218,218,218);
   overflow: hidden;
 }
 
-h1 {
-  font-size: 10rem;
+@font-face{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'EB Garamond', serif;
+  src: url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Noto+Sans+JP:wght@100&display=swap');
 }
 
-h2 {
-  font-size: 2.5rem;
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "mega":5000,
+);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
-p {
-  font-size: 1.2rem;
-}
 

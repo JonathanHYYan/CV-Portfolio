@@ -1,46 +1,44 @@
+import {
+  Codepen,
+  FacebookBox,
+  Github,
+  LinkedinBox,
+  Instagram,
+  Twitter,
+} from "@styled-icons/remix-line";
 import { useContext } from "react";
 import ScrollContext from "../../store/context";
-import {
-  IoLogoGithub,
-  IoLogoInstagram,
-  IoLogoLinkedin,
-  IoLogoTwitter,
-} from "react-icons/io";
-import { AiOutlineFacebook, AiOutlineCopyrightCircle } from "react-icons/ai";
-import { FaCodepen } from "react-icons/fa";
-import "./Footer.scss";
+import { Footer, CopyrightLogo } from "./FooterStyles";
 
-const Footer = () => {
+const FootComponent = () => {
   const scrollCtx = useContext(ScrollContext);
   const scroll = scrollCtx.scroll;
   const footerContent = (
-    <footer className="footer">
+    <Footer >
       <div className="socials">
+        <p>You can find me socially on these platforms: </p>
         <ul>
           <li>
-            <p>You can find me socially on these platforms: </p>
+            <FacebookBox />
           </li>
           <li>
-            <AiOutlineFacebook size="1.5rem" />
+            <Instagram />
           </li>
           <li>
-            <IoLogoInstagram size="1.5rem" />
+            <Twitter />
           </li>
           <li>
-            <IoLogoTwitter size="1.5rem" />
+            <LinkedinBox />
           </li>
           <li>
-            <IoLogoLinkedin size="1.5rem" />
+            <Github />
           </li>
           <li>
-            <IoLogoGithub size="1.5rem" />
-          </li>
-          <li>
-            <FaCodepen size="1.5rem" />
+            <Codepen />
           </li>
         </ul>
         <h3>
-          <AiOutlineCopyrightCircle size="3rem" />
+          <CopyrightLogo />
           Jonathan Yan
         </h3>
       </div>
@@ -51,9 +49,9 @@ const Footer = () => {
           <li>Projects</li>
         </ul>
       </div>
-    </footer>
+    </Footer>
   );
   return <>{scroll && footerContent}</>;
 };
 
-export default Footer;
+export default FootComponent;

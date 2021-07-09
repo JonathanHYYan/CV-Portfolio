@@ -9,6 +9,10 @@ export const Card = styled.div`
   border-radius: 6px;
   margin: 10em 2.5% 5em 2.5%;
   padding: 2.5em;
+
+  @media only ${device.tabletS} {
+    margin: 1.5em 2.5% 4em 2.5%;
+  }
 `;
 
 export const CardTitle = styled.h2`

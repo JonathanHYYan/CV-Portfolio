@@ -1,14 +1,14 @@
-import {Card} from "../UI/Card";
+import {Card, CardText, CardTitle} from "../UI/Card";
 
 const Intro = () => {
   
   const content = (
     <div>
       <Card>
-        <h2 className="card-title">What to Expect?</h2>
-        <p className="card-text">
+        <CardTitle className="card-title">What to Expect?</CardTitle>
+        <CardText className="card-text">
           Imagine, design and create. Let's talk about the aesthetics and features that best represent you and your goals. 
-        </p>
+        </CardText>
       </Card>
     </div>
   );

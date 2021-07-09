@@ -32,7 +32,7 @@ export const IconStyle = styled.div`
 
 const animationFunc = (num:number) => {
   return(`
-  animation: onInitialView ${0.6*num}s ease-out forwards;
+  animation: onInitialView ${0.4*num}s ease-out forwards;
   @keyframes onInitialView {
     0% {
       opacity: 0;

@@ -15,18 +15,19 @@ const TechStack = () => {
   const [initialView, setInitialview] = useState(false);
   
   useEffect(() => {
+    const inViewCheck = () => {
+      const techStack = document.getElementById("techStack");
+      const techStackOffset = techStack!.offsetTop*1.2;
+  
+      if (window.scrollY > techStackOffset) {
+        console.log(techStackOffset);
+        setInitialview(true);
+      }
+    }
     window.addEventListener("scroll", inViewCheck);
   });
 
-  const inViewCheck = () => {
-    const techStack = document.getElementById("techStack");
-    const techStackOffset = techStack!.offsetTop;
 
-    if (window.scrollY > techStackOffset) {
-      console.log(techStackOffset);
-      setInitialview(true);
-    }
-  }
 
   const LogoHolder = (
     <>
