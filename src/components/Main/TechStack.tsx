@@ -20,7 +20,6 @@ const TechStack = () => {
       const techStackOffset = techStack!.offsetTop*1.2;
   
       if (window.scrollY > techStackOffset) {
-        console.log(techStackOffset);
         setInitialview(true);
       }
     }
