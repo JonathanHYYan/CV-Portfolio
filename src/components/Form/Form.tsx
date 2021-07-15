@@ -1,11 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ScrollContext from "../../store/context";
-import { Card } from "../UI/Card";
+import { Card, CardTitle } from "../UI/Card";
 import { CircleHolder } from "./FormStyles";
 
 const Form = () => {
   const scrollCtx = useContext(ScrollContext);
   const scroll = scrollCtx.scroll;
+  const [clicked, setClicked] = useState(false)
 
   const formContent = (
     <form>
@@ -17,32 +18,30 @@ const Form = () => {
     </form>
   );
 
+  const clickHandler = () => {
+    setClicked(true)
+  }
+
   const formCircle = (
-    <CircleHolder>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
+    <CircleHolder onClick={clickHandler}>
+      <div className="circle">Interested?</div>
       <div className="circle"></div>
       <div className="circle"></div>
       <div className="circle"></div>
     </CircleHolder>
   )
 
+  const form = (
+    <>
+      <CardTitle>Contact Me!</CardTitle>
+    </>
+  )
+
   return (
     <>
       {scroll && (
         <section id="contact-form">
-          <Card>{formCircle}</Card>
+          <Card>{clicked ? form : formCircle}</Card>
         </section>
       )}
     </>
@@ -50,3 +49,6 @@ const Form = () => {
 };
 
 export default Form;
+
+
+
