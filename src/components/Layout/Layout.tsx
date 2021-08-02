@@ -6,6 +6,8 @@ import { Main } from "./LayoutStyles";
 const Layout = (props: any) => {
   const [scroll, setScroll] = useState(false);
   const [landingTransition, setLandingTransition] = useState(false);
+  const [form, setForm] = useState(false);
+  const value = {scroll, landingTransition, form, setForm};
   
   if(!scroll) {
     document.body.style.overflow = "hidden";
@@ -31,9 +33,8 @@ const Layout = (props: any) => {
     
   }, []);
 
-  
-  return (
-    <ScrollContext.Provider value={{ scroll: scroll, landingTransition:landingTransition }}>
+ return (
+    <ScrollContext.Provider value={value}>
       <Main>
         {scroll && <NavBar />}
         {props.children}

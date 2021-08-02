@@ -12,7 +12,7 @@ export const NavBar = styled.nav`
 `;
 
 export const NavLink = styled(Link)`
-list-style-type: none;s
+list-style-type: none;
 display: inline-block;
 margin: 0 2em 0 0;
 color: white;

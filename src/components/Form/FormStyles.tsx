@@ -1,84 +1,38 @@
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 
-const circleGenerator = [];
+export const ContactForm = styled.form`
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  margin: 1em;
+`;
 
-const animateCircle = (i: number) => keyframes`
-  0% {
-    transform:translateX(-50%) rotate(0deg);
-  }
-  100% {
-    transform:translateX(-50%) rotate(${-i*360}deg);
+export const DataInput = styled.input`
+  // border: none;
+  background:none;
+  margin: 0.7em;
+  padding:0.3em 1em;
+  width:100%;
+  
+  &:focus {
+    outline: none;
   }
 `;
 
-const pulseBG =  keyframes `
-0% {
-  transform: translateX(-40%) translateY(80%) scale(0.95);
-}
+export const MessageInput = styled.input`
+// border: none;
+background:none;
+margin: 0.7em;
+padding:0.3em 1em;
 
-70% {
-  transform: translateX(-40%) translateY(80%) scale(1);
-}
-
-100% {
-  transform:  translateX(-40%) translateY(80%) scale(0.95);
+&:focus {
+  outline: none;
 }
 `;
 
-const initSize = 5;
-const initMod = 8;
-const sizeMod = 0.89;
-
-
-for (let i = 1; i < 16; i++) {
-  if (i > 1) {
-    circleGenerator.push(css`
-    .circle:nth-child(${i}) {
-      size: ${initSize + initMod * (i - i*sizeMod)}em;
-      border: 13px solid black;
-      border-bottom:none;
-			border-radius:${initSize + initMod * (i - i*sizeMod)}em ${initSize + initMod * (i - i*sizeMod)}em 0 0;
-			width:${initSize + initMod * (i - i*sizeMod)}em;
-			height:${(initSize + initMod * (i - i*sizeMod)) / 2}em;
-			z-index:  ${16 - i};
-      // transform:translateX(-50%);
-      animation: ${animateCircle(i)} 10s infinite ease-in-out;
-    }
-    `);
-  } else {
-    circleGenerator.push(css`
-    .circle:nth-child(${i}) {
-      size: 25px;
-      border-bottom:none;
-			border-radius:${initSize + initMod * (i - i*sizeMod)}em ${initSize + initMod * (i - i*sizeMod)}em 0 0;
-			width:${initSize + initMod * (i - i*sizeMod)}em;
-			height:${(initSize + initMod * (i - i*sizeMod)) / 2}em;
-			z-index:  ${16 - i};
-      transform: scale(1);
-      animation: ${pulseBG} 2s infinite;
-    }
-    `);
-  }
-};
-
-console.log(circleGenerator)
-
-export const CircleHolder = styled.div`
-  width: 500px;
-  height:250px;
-  position relative;
-
-  .circle {
-    font-size:2rem;
-    border-radius: 100% 100% 0 0;
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translateX(-40%) translateY(82.5%);
-    transform-origin: bottom center;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  ${circleGenerator}
+export const Button = styled.button`
+  padding 0.2em;
+  width: 6em;
+  margin: 0.7em;
 `;
+ 

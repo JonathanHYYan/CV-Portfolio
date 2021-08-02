@@ -9,7 +9,6 @@ export const DeviceWrapper = styled.div`
   width: 80%;
   position: relative;
   height: 20vmin;
-  border: 2px solid red;
 
   @media only ${device.mobileS} {
     width:100%;

@@ -1,9 +1,7 @@
 import {
   Codepen,
-  FacebookBox,
   Github,
   LinkedinBox,
-  Instagram,
   Twitter,
 } from "@styled-icons/remix-line";
 import { useContext } from "react";
@@ -18,12 +16,6 @@ const FootComponent = () => {
       <div className="socials">
         <p>You can find me socially on these platforms: </p>
         <ul>
-          <li>
-            <FacebookBox />
-          </li>
-          <li>
-            <Instagram />
-          </li>
           <li>
             <Twitter />
           </li>

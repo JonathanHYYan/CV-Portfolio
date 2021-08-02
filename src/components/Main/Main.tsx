@@ -19,7 +19,7 @@ const Main = () => {
 
   return (
     <>
-      <div>{scroll && content}</div>
+      {scroll && content}
     </>
   );
 };
