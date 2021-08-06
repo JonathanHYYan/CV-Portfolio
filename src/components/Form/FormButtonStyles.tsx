@@ -1,6 +1,10 @@
 import styled, { css, keyframes } from "styled-components";
 import { highlightColor } from "../UI/themeStyles";
 
+interface Props {
+  landing: boolean;
+}
+
 const circleGenerator = [];
 
 const animateCircle = (i: number) => keyframes`
@@ -41,9 +45,9 @@ for (let i = 1; i < 16; i++) {
 			border-radius:${initSize + initMod * (i - i*sizeMod)}em ${initSize + initMod * (i - i*sizeMod)}em 0 0;
 			width:${initSize + initMod * (i - i*sizeMod)}em;
 			height:${(initSize + initMod * (i - i*sizeMod)) / 2}em;
-			z-index:  ${16 - i};
+			z-index:  ${-16 - i};
       // transform:translateX(-50%);
-      animation: ${animateCircle(i)} 10s infinite ease-in-out;
+      animation: ${animateCircle(i)} 20s infinite ease-in-out;
     }
     `);
   } else {

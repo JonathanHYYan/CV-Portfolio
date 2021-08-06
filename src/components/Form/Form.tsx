@@ -1,50 +1,50 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import ScrollContext from "../../store/context";
 import { Card, CardTitle } from "../UI/Card";
 import { CircleHolder } from "./FormButtonStyles";
-import { DataInput, ContactForm, MessageInput, Button } from "./FormStyles";
+import {
+  DataInput,
+  ContactForm,
+  MessageInput,
+  Button,
+  FormControls,
+} from "./FormStyles";
 
 const Form = () => {
   const scrollCtx = useContext(ScrollContext);
   const scroll = scrollCtx.scroll;
-  const {form, setForm} = useContext(ScrollContext)
+  const { form, setForm } = useContext(ScrollContext);
 
   const formToggle = () => {
     setForm(!form);
-  }
+  };
 
   const formCircle = (
-  <>
-    <CardTitle>Get in Touch?</CardTitle>
-    <CircleHolder onClick={formToggle}>
-      <div className="circle">Contact Me!</div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-    </CircleHolder>
+    <>
+      <CardTitle>Get in Touch?</CardTitle>
+      <CircleHolder onClick={formToggle}>
+        <div className="circle">Contact Me!</div>
+        <div className="circle"></div>
+        <div className="circle"></div>
+        <div className="circle"></div>
+      </CircleHolder>
     </>
-  )
+  );
 
   const formComponent = (
     <>
       <CardTitle>Contact Form</CardTitle>
       <ContactForm className="form-control">
-        <div>
-          <div className="name">
-            <DataInput type="text" value="Name"/>
-          </div>
-          <div className="email">
-            <DataInput  type="text" value="Email"/>
-          </div>
-          <div className="message">
-          <MessageInput type="text" value="Message"/>
-          </div>
+        <DataInput type="text" value="Name" />
+        <DataInput type="text" value="Email" />
+        <MessageInput name="message" rows={5} />
+        <FormControls>
           <Button>Cancel</Button>
-          <Button type="submit">Send</Button> 
-        </div>
+          <Button type="submit">Send</Button>
+        </FormControls>
       </ContactForm>
     </>
-  )
+  );
 
   return (
     <>
@@ -58,6 +58,3 @@ const Form = () => {
 };
 
 export default Form;
-
-
-
