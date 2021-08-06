@@ -15,6 +15,9 @@ const Form = () => {
   const scroll = scrollCtx.scroll;
   const { form, setForm } = useContext(ScrollContext);
 
+  const circleContent = ['Contact Me!','','',''];
+  const circleArray = circleContent.map(i => <div className="circle">{i}</div>);
+
   const formToggle = () => {
     setForm(!form);
   };
@@ -23,10 +26,7 @@ const Form = () => {
     <>
       <CardTitle>Get in Touch?</CardTitle>
       <CircleHolder onClick={formToggle}>
-        <div className="circle">Contact Me!</div>
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="circle"></div>
+        {circleArray}
       </CircleHolder>
     </>
   );
@@ -37,7 +37,7 @@ const Form = () => {
       <ContactForm className="form-control">
         <DataInput type="text" value="Name" />
         <DataInput type="text" value="Email" />
-        <MessageInput name="message" rows={5} />
+        <MessageInput rows={5} value="Message" />
         <FormControls>
           <Button>Cancel</Button>
           <Button type="submit">Send</Button>
