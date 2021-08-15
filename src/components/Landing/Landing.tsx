@@ -1,6 +1,6 @@
 import { FunctionComponent, useContext } from "react";
 import ScrollContext from "../../store/context";
-import { CircleHolder } from "../Form/FormButtonStyles";
+import { CircleHolder } from "./CircleAnimation";
 import { Title, LandingSection, Header, HiddenHeader } from "./LandingStyles";
 
 
@@ -23,5 +23,5 @@ const LandingPage: FunctionComponent = () => {
     </LandingSection>
   );
 };
-//
+
 export default LandingPage;

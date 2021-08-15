@@ -1,16 +1,7 @@
 import { NavBar, NavLink } from "./NavComponents";
-import { useContext} from "react";
-import ScrollContext from "../../store/context";
 
 const NavComponent = (props: any) => {
-
-  const {form, setForm} = useContext(ScrollContext);
-
-  const formToggle = () => {
-    console.log("activated");
-    setForm(true);
-  }
-  
+ 
   return (
     <NavBar>
       <NavLink
@@ -37,7 +28,6 @@ const NavComponent = (props: any) => {
         spy={true}
         smooth={true}
         duration={400}
-        onSetActive={formToggle}
       >
         Contact
       </NavLink>

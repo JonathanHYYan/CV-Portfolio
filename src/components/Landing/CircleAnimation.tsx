@@ -1,10 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 import { highlightColor } from "../UI/themeStyles";
 
-interface Props {
-  landing: boolean;
-}
-
 const circleGenerator = [];
 
 const animateCircle = (i: number) => keyframes`
@@ -16,19 +12,7 @@ const animateCircle = (i: number) => keyframes`
   }
 `;
 
-const pulseBG =  keyframes `
-0% {
-  transform: translateX(-47%) translateY(80%) scale(0.95);
-}
 
-70% {
-  transform: translateX(-47%) translateY(80%) scale(1);
-}
-
-100% {
-  transform:  translateX(-47%) translateY(80%) scale(0.95);
-}
-`;
 
 const initSize = 5;
 const initMod = 8;
@@ -46,8 +30,7 @@ for (let i = 1; i < 16; i++) {
 			width:${initSize + initMod * (i - i*sizeMod)}em;
 			height:${(initSize + initMod * (i - i*sizeMod)) / 2}em;
 			z-index:  ${-16 - i};
-      // transform:translateX(-50%);
-      animation: ${animateCircle(i)} 20s infinite ease-in-out;
+      animation: ${animateCircle(i)} 30s infinite ease-in-out;
     }
     `);
   } else {
@@ -59,8 +42,6 @@ for (let i = 1; i < 16; i++) {
 			width:${initSize + initMod * (i - i*sizeMod)}em;
 			height:${(initSize + initMod * (i - i*sizeMod)) / 2}em;
 			z-index:  ${16 - i};
-      transform: scale(1);
-      animation: ${pulseBG} 2s infinite;
     }
     `);
   }
@@ -68,10 +49,6 @@ for (let i = 1; i < 16; i++) {
 
 
 export const CircleHolder = styled.div`
-  margin: 3em 0 0 0;
-  width: 500px;
-  height:250px;
-  position relative;
 
   .circle {
     font-size:2rem;
@@ -80,11 +57,7 @@ export const CircleHolder = styled.div`
     position: absolute;
     bottom: 50%;
     left: 50%;
-    transform: translateX(-40%) translateY(82.5%);
     transform-origin: bottom center;
-    &:hover {
-      cursor: pointer;
-    }
   }
   ${circleGenerator}
 `;
