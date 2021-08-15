@@ -1,29 +1,23 @@
-import { useState } from "react";
 import { DataInput } from "./FormStyles";
 
 interface Props {
+  id: string;
   labelName: string;
   min: number;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>)=>void;
-};
-
-const formState = {
-  name: "",
-  email: "",
-  message: "",
-};
+  inputValue: string;
+  inputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
 const FormInput: React.FC<Props> = (props) => {
-  const [formData, setFormData] = useState
-
-  const nameChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData((prevState) => ({ ...prevState, name: event.target.value }));
-  };
-
-
-  return(
-    <DataInput placeholder={props.labelName} minLength={props.min} onChange={nameChangeHandler}/>
-  )
+  return (
+    <DataInput
+      id={props.id}
+      placeholder={props.labelName}
+      minLength={props.min}
+      value={props.inputValue}
+      onChange={props.inputChange}
+    />
+  );
 };
 
-export default FormInput
+export default FormInput;

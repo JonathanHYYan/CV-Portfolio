@@ -11,9 +11,14 @@ const formState = {
 };
 
 const Form = () => {
-  const [formData, setFormData] = useState<object>(formState);
+  const [formData, setFormData] = useState(formState);
 
-  const nameChangeHandler = (event: React.ChangeEvent<HTMLInputElement>,):void => {
+  const nameChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    if (event.target.value.trim().length === 0) {
+      console.log(formData.name);
+    }
     setFormData((prevState) => ({ ...prevState, name: event.target.value }));
   };
 
@@ -21,12 +26,14 @@ const Form = () => {
     setFormData((prevState) => ({ ...prevState, email: event.target.value }));
   };
 
-  const messageChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const messageChangeHandler = (
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     setFormData((prevState) => ({ ...prevState, message: event.target.value }));
   };
 
   const submitHandler = (event: any) => {
-    console.log(formData)
+    console.log(formData);
     event.preventDefault();
   };
 
@@ -34,12 +41,26 @@ const Form = () => {
     <>
       <CardTitle>Contact Form</CardTitle>
       <ContactForm className="form-control" onSubmit={submitHandler}>
-        <FormInput labelName="Name" min={1} onChange={nameChangeHandler} />
-        <FormInput labelName="Email" min={1} onChange={emailChangeHandler} />
+        <FormInput
+          id="name"
+          labelName="Name"
+          min={1}
+          inputValue={formData.name}
+          inputChange={nameChangeHandler}
+        />
+        <FormInput
+          id="email"
+          labelName="Email"
+          min={1}
+          inputValue={formData.email}
+          inputChange={emailChangeHandler}
+        />
         <FormMessage
+          id="message"
           labelName="Message"
           rows={5}
-          onChange={messageChangeHandler}
+          messageValue={formData.message}
+          messageChange={messageChangeHandler}
         />
         <FormControls>
           <Button>Cancel</Button>
