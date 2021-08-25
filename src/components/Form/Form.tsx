@@ -21,6 +21,8 @@ const Form = () => {
   const [formData, setFormData] = useState(formState);
   const [isValid, setIsValid] = useState(false);
   const [used, setUsed] = useState(touchState);
+  const [isLoading, setIsLoading] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const nameChangeHandler = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -44,12 +46,14 @@ const Form = () => {
     // }
   });
 
-  const regexText = /ab+z/;
+  const emailRegexValidation = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
 
- 
 
-  const submitHandler = (event: any) => {
+
+
+  const submitHandler = async (event: any) => {
     event.preventDefault();
+    setIsLoading(true);
     setUsed((prevState => ({...prevState, name:true, email:true, message:true})))
 
     if (
@@ -62,7 +66,15 @@ const Form = () => {
     }
 
     setIsValid(true);
-    console.log(formData);
+
+    const response = await fetch("http://localhost:3001/send", {
+      method: "POST",
+      headers: {"Content-type": "application/json"},
+      body: JSON.stringify(formData),
+    }).then(()=>{
+      setIsLoading(false);
+      setFormSubmitted(true);
+    });
   };
 
   const nameBlurHandler = (event : React.ChangeEvent<HTMLInputElement>) => {
@@ -74,7 +86,6 @@ const Form = () => {
     }
     setIsValid(true);
 
-    console.log(touchState);
   };
 
   const emailBlurHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -102,10 +113,11 @@ const Form = () => {
   const messageCheck = !isValid && used.message;
 
   const inputInvalid = used.name && used.email && used.message && !isValid;
+  
+  const submitButton = <Button type="submit">Send</Button>;
 
-  console.log(isValid)
-  console.log(used.name)
-
+  const loadButton = <Button disabled type="submit">Sending...</Button>;
+  
   const formComponent = (
     <>
       <CardTitle>Contact Form</CardTitle>
@@ -139,17 +151,20 @@ const Form = () => {
         />
         {inputInvalid && <FormError>Please fill in all sections</FormError>}
         <FormControls>
-          <Button>Cancel</Button>
-          <Button type="submit">Send</Button>
+          {isLoading ? loadButton:submitButton}
         </FormControls>
       </ContactForm>
     </>
   );
 
+  const submitConfirmation = (
+    <CardTitle>Message Sent!</CardTitle>
+  );
+
   return (
     <>
       <section id="contact-form">
-        <Card>{formComponent}</Card>
+        <Card>{!formSubmitted ? formComponent : submitConfirmation}</Card>
       </section>
     </>
   );
