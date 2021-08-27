@@ -17,6 +17,8 @@ const touchState: { name: boolean; email: boolean; message: boolean } = {
   message: false,
 };
 
+type ResponseData = {statusMessage:string}
+
 const Form = () => {
   const [formData, setFormData] = useState(formState);
   const [isValid, setIsValid] = useState(false);
@@ -46,15 +48,18 @@ const Form = () => {
     // }
   });
 
-  const emailRegexValidation = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
-
-
-
+  const emailRegexValidation =
+    /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
 
   const submitHandler = async (event: any) => {
     event.preventDefault();
     setIsLoading(true);
-    setUsed((prevState => ({...prevState, name:true, email:true, message:true})))
+    setUsed((prevState) => ({
+      ...prevState,
+      name: true,
+      email: true,
+      message: true,
+    }));
 
     if (
       formData.name.trim() === "" ||
@@ -69,15 +74,21 @@ const Form = () => {
 
     const response = await fetch("http://localhost:3001/send", {
       method: "POST",
-      headers: {"Content-type": "application/json"},
+      headers: { "Content-type": "application/json" },
       body: JSON.stringify(formData),
-    }).then(()=>{
-      setIsLoading(false);
+    })
+
+    console.log(response);
+
+    if(response.status === 200) {
+      console.log("Message Sent");
       setFormSubmitted(true);
-    });
+    } else {
+      console.log("Message failed to send")
+    }
   };
 
-  const nameBlurHandler = (event : React.ChangeEvent<HTMLInputElement>) => {
+  const nameBlurHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsed((usedState) => ({ ...usedState, name: true }));
 
     if (formData.name.trim() === "") {
@@ -85,7 +96,6 @@ const Form = () => {
       return;
     }
     setIsValid(true);
-
   };
 
   const emailBlurHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -98,7 +108,9 @@ const Form = () => {
     setIsValid(true);
   };
 
-  const messageBlurHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const messageBlurHandler = (
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     setUsed((prevState) => ({ ...prevState, message: true }));
 
     if (formData.message.trim() === "") {
@@ -113,11 +125,15 @@ const Form = () => {
   const messageCheck = !isValid && used.message;
 
   const inputInvalid = used.name && used.email && used.message && !isValid;
-  
+
   const submitButton = <Button type="submit">Send</Button>;
 
-  const loadButton = <Button disabled type="submit">Sending...</Button>;
-  
+  const loadButton = (
+    <Button disabled type="submit">
+      Sending...
+    </Button>
+  );
+
   const formComponent = (
     <>
       <CardTitle>Contact Form</CardTitle>
@@ -150,16 +166,12 @@ const Form = () => {
           onBlur={messageBlurHandler}
         />
         {inputInvalid && <FormError>Please fill in all sections</FormError>}
-        <FormControls>
-          {isLoading ? loadButton:submitButton}
-        </FormControls>
+        <FormControls>{isLoading ? loadButton : submitButton}</FormControls>
       </ContactForm>
     </>
   );
 
-  const submitConfirmation = (
-    <CardTitle>Message Sent!</CardTitle>
-  );
+  const submitConfirmation = <CardTitle>Message Sent!</CardTitle>;
 
   return (
     <>
