@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { device, highlightColor, primaryColor } from "../UI/themeStyles";
+import backgorundImg from "../images/website.png"
+
 
 interface monToggle {
   deviceToggle: boolean;
@@ -25,6 +27,11 @@ export const PhoneToLaptop = styled.div<monToggle>`
   transition: all 0.4s ease;
 `;
 
+const miniBackground = `
+background-image: url(${backgorundImg});
+background-size:cover;
+`;
+
 const monitor = `
 color: #000;
 position: absolute;
@@ -34,7 +41,7 @@ width: 20vw;
 padding: 5.625vw;
 border-radius: 5%;
 border: solid 4px black;
-background-color: ${highlightColor};
+${miniBackground}
 
 &:before {
   content: '';
@@ -67,7 +74,7 @@ width: 3.525vw;
 padding: 4.2vw;
 border-radius: 0;
 border: solid 0.4vw black;
-background-color: ${highlightColor};
+${miniBackground}
 
 &:before {
   content: '';
@@ -78,7 +85,7 @@ background-color: ${highlightColor};
   border: solid 0.4vw black;
   background-color: ${primaryColor};
   border-radius: 5%;
-  z-index: -10;
+  z-index: -10; 
 }
 
 &:after {
@@ -101,7 +108,7 @@ width: 3.5vw;
 height: 5.8vw;
 border-radius: 10%;
 border: solid 0.3vw black;
-background-color: ${highlightColor};
+${miniBackground}
 
 &:before {
   content: '';
@@ -134,7 +141,7 @@ width: 13.8vw;
 height: 9.2vw;
 border-radius: 5%;
 border: solid 0.65vw black;
-background-color: ${highlightColor};
+${miniBackground}
 
 &:before {
   content: '';
