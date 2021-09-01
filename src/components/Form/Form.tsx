@@ -3,7 +3,8 @@ import { useState } from "react";
 import FormInput from "./FormInput";
 import FormMessage from "./FormMessage";
 import { ContactForm, Button, FormControls, FormError } from "./FormStyles";
-import { useEffect } from "react";
+import { useContext } from "react";
+import ScrollContext from "../../store/context";
 
 const formState: { name: string; email: string; message: string } = {
   name: "",
@@ -17,9 +18,9 @@ const touchState: { name: boolean; email: boolean; message: boolean } = {
   message: false,
 };
 
-type ResponseData = {statusMessage:string}
-
 const Form = () => {
+  const scrollCtx = useContext(ScrollContext);
+  const scroll = scrollCtx.scroll;
   const [formData, setFormData] = useState(formState);
   const [isValid, setIsValid] = useState(false);
   const [used, setUsed] = useState(touchState);
@@ -41,15 +42,6 @@ const Form = () => {
   ) => {
     setFormData((prevState) => ({ ...prevState, message: event.target.value }));
   };
-
-  useEffect(() => {
-    // if (isValid) {
-    //   console.log(formData);
-    // }
-  });
-
-  const emailRegexValidation =
-    /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
 
   const submitHandler = async (event: any) => {
     event.preventDefault();
@@ -175,9 +167,9 @@ const Form = () => {
 
   return (
     <>
-      <section id="contact-form">
+      {scroll && <section id="contact-form">
         <Card>{!formSubmitted ? formComponent : submitConfirmation}</Card>
-      </section>
+      </section>}
     </>
   );
 };
