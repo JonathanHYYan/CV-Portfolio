@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { device, highlightColor, primaryColor } from "../UI/themeStyles";
-import backgorundImg from "../images/website.png"
-
+import { device, primaryColor } from "../UI/themeStyles";
+import bgmLandscape from "../images/website.png"
+import bgmPortrait from "../images/websitePortrait.png"
 
 interface monToggle {
   deviceToggle: boolean;
@@ -27,8 +27,13 @@ export const PhoneToLaptop = styled.div<monToggle>`
   transition: all 0.4s ease;
 `;
 
-const miniBackground = `
-background-image: url(${backgorundImg});
+const miniLandscape = `
+background-image: url(${bgmLandscape});
+background-size:cover;
+`;
+
+const miniPortrait = `
+background-image: url(${bgmPortrait});
 background-size:cover;
 `;
 
@@ -41,7 +46,7 @@ width: 20vw;
 padding: 5.625vw;
 border-radius: 5%;
 border: solid 4px black;
-${miniBackground}
+${miniLandscape}
 
 &:before {
   content: '';
@@ -74,7 +79,7 @@ width: 3.525vw;
 padding: 4.2vw;
 border-radius: 0;
 border: solid 0.4vw black;
-${miniBackground}
+${miniPortrait}
 
 &:before {
   content: '';
@@ -108,7 +113,7 @@ width: 3.5vw;
 height: 5.8vw;
 border-radius: 10%;
 border: solid 0.3vw black;
-${miniBackground}
+${miniPortrait}
 
 &:before {
   content: '';
@@ -141,7 +146,7 @@ width: 13.8vw;
 height: 9.2vw;
 border-radius: 5%;
 border: solid 0.65vw black;
-${miniBackground}
+${miniLandscape}
 
 &:before {
   content: '';

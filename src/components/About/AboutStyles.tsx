@@ -14,6 +14,7 @@ export const AboutMeTitle = styled.div<Props>`
   transition: transform 2s ease, opacity 4s;
   transform: translateX(${({ scrollPercent }) => -50 + scrollPercent}%);
 
+
   &:hover {
     transition: 4s;
     opacity: 0;
@@ -25,7 +26,9 @@ export const AboutMeTitle = styled.div<Props>`
   }
 `;
 
-export const AboutSection = styled.section`
+
+
+export const AboutSection = styled.section<Props>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,6 +52,7 @@ export const AboutSection = styled.section`
 
     @media only ${device.mobileS} {
       background-size: 1100px, 733px;
+      opacity: ${({scrollPercent}) => (scrollPercent > 50) ? 1 : 0 }
     }
   }
 

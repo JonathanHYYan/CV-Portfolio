@@ -15,8 +15,10 @@ const About = () => {
     setScrollAmount(window.scrollY * 0.1);
   };
 
+  console.log(scrollAmount)
+
   const aboutContent = (
-    <AboutSection id="about">
+    <AboutSection id="about" scrollPercent={scrollAmount}>
       <AboutMeTitle scrollPercent={scrollAmount}>About Me</AboutMeTitle>
       <AboutText>
         Front-end developer creating memorable and smooth user experiences

@@ -15,7 +15,7 @@ const LandingPage: FunctionComponent = () => {
     <LandingSection id="landingPage" scroll={scroll} >
       <Header >
       <CircleHolder >
-        {circleArray}
+        {/* {circleArray} */}
         </CircleHolder>
         <Title>I'm John</Title>
         <HiddenHeader>a web developer</HiddenHeader>
