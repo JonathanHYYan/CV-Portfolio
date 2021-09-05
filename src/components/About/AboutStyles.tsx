@@ -67,7 +67,7 @@ export const AboutText = styled.div`
   position: absolute;
   color: $secondary-color;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
 
   &:before {
     opacity: 1;

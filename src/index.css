@@ -9,13 +9,6 @@ body {
   src: url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Noto+Sans+JP:wght@100&display=swap');
 }
 
-$font-weights: (
-  "regular": 400,
-  "medium": 500,
-  "bold": 700,
-  "mega":5000,
-);
-
 * {
   box-sizing: border-box;
   margin: 0;

@@ -35,5 +35,5 @@ export const CardText = styled.p`
 export const CardHighlight = styled.span`
   color: ${highlightColor};
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 700;
 `;

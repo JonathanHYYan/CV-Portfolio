@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import ScrollContext from "../../store/context";
-import Intro from "./WhatIDo";
+import WhatIDo from "./WhatIDo";
 import TechStack from "./TechStack";
 import Expect from "./Expect";
 import { MainSection } from "./MainStyles";
@@ -11,7 +11,7 @@ const Main = () => {
 
   const content = (
     <MainSection id="main">
-      <Intro />
+      <WhatIDo />
       <TechStack />
       <Expect />
     </MainSection>

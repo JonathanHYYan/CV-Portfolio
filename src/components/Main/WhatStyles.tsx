@@ -29,12 +29,12 @@ export const PhoneToLaptop = styled.div<monToggle>`
 
 const miniLandscape = `
 background-image: url(${bgmLandscape});
-background-size:cover;
+background-size:100%;
 `;
 
 const miniPortrait = `
 background-image: url(${bgmPortrait});
-background-size:cover;
+background-size:100%;
 `;
 
 const monitor = `

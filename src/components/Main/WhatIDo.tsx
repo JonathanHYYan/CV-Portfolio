@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardTitle, CardText, CardHighlight } from "../UI/Card";
 import { MonitorToTablet, PhoneToLaptop, DeviceWrapper } from "./WhatStyles";
 
-const Intro = () => {
+const WhatIDo = () => {
   const [iconToggle, setTvIconToggle] = useState(true);
   const [phoneIconToggle, setPhoneIcontoggle] = useState(true);
 
@@ -34,4 +34,4 @@ const Intro = () => {
   return <>{content}</>;
 };
 
-export default Intro;
+export default WhatIDo;
