@@ -17,9 +17,9 @@ export const DeviceWrapper = styled.div`
     min-width: 400px;
   }
 `;
-
+//monitor : tablet
 export const MonitorToTablet = styled.div<monToggle>`
-  ${({ deviceToggle }) => (deviceToggle ? monitor : tablet)}
+  ${({ deviceToggle }) => (deviceToggle ? tablet : tablet)}
   transition: all 0.4s ease;
 `;
 export const PhoneToLaptop = styled.div<monToggle>`
@@ -41,12 +41,17 @@ const monitor = `
 color: #000;
 position: absolute;
 top:5%;
-left 20%;
+left: 20%;
 width: 20vw;
 padding: 5.625vw;
 border-radius: 5%;
 border: solid 4px black;
 ${miniLandscape}
+
+@media only ${device.tabletS} {
+  width: 32vw;
+  padding: 8vw;
+}
 
 &:before {
   content: '';
@@ -62,7 +67,7 @@ ${miniLandscape}
   content: '';
   position: absolute;
   top:115%;
-  left: 36%;
+  left: 38%;
   width: 5vw;
   height: .7vw;
   background-color: currentColor;
@@ -80,6 +85,11 @@ padding: 4.2vw;
 border-radius: 0;
 border: solid 0.4vw black;
 ${miniPortrait}
+@media only ${device.tabletS} {
+  width: 12vw;
+  height: 15.5vw;
+}
+
 
 &:before {
   content: '';
@@ -90,7 +100,11 @@ ${miniPortrait}
   border: solid 0.4vw black;
   background-color: ${primaryColor};
   border-radius: 5%;
-  z-index: -10; 
+  z-index: -10;
+  @media only ${device.tabletS} {
+    width: 12vw;
+    height: 15.5vw;
+  }
 }
 
 &:after {

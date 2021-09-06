@@ -6,24 +6,25 @@ interface Props {
 }
 
 export const ContactForm = styled.form`
+  padding-top:2em;
   width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1em;
-
-  &: invalid {
-    background-color: red;
-  }
 `;
 
 export const DataInput = styled.input<Props>`
-  border-style: none none solid none;
-  background: ${({hasError}) => (hasError ? "#f8786c" : "none")};
+  border-style: none;
+  border-bottom: 2px solid grey;
+  background: ${({ hasError }) => (hasError ? "#f8786c" : "none")};
   margin: 0.7em;
   padding: 0.3em 1em;
   width: 100%;
+  ::placeholder {
+    color: black;
+  }
 
   &:focus {
     outline: none;
@@ -36,11 +37,15 @@ export const DataInput = styled.input<Props>`
 `;
 
 export const MessageInput = styled.textarea<Props>`
-  border-style: none none solid none;
-  background: ${({hasError}) => (hasError ? "#f8786c" : "none")};
+  border-style: none;
+  border-bottom: 2px solid grey;
+  background: ${({ hasError }) => (hasError ? "#f8786c" : "none")};
   margin: 0.7em;
   padding: 0.3em 1em;
   width: 100%;
+  ::placeholder {
+    color: black;
+  }
 
   &:focus {
     outline: none;
@@ -48,8 +53,7 @@ export const MessageInput = styled.textarea<Props>`
   }
 `;
 
-export const FormControls = styled.div`
-`;
+export const FormControls = styled.div``;
 
 export const Button = styled.button`
   padding 0.2em;

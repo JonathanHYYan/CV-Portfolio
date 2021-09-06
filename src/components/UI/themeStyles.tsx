@@ -4,6 +4,7 @@ export const theme = {
   highlightColor: "rgb(26,184,196)",
 };
 
+
 export const { primaryColor, secondaryColor, highlightColor } = theme;
 
 const viewPortSize = {

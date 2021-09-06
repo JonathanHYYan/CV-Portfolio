@@ -1,14 +1,20 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import { highlightColor } from "../UI/themeStyles";
+import { highlightColor, secondaryColor } from "../UI/themeStyles";
 
-export const NavBar = styled.nav`
+
+interface Props {
+  navBackground: boolean
+};
+
+export const NavBar = styled.nav<Props>`
   height: 2em;
-  margin: 1em;
+  width:100%;
   position: fixed;
   display: flex;
-  right: 0;
   z-index: 100;
+  justify-content: flex-end;
+  background-color:${({navBackground}) => (navBackground ? secondaryColor : "")};
 `;
 
 export const NavLink = styled(Link)`
@@ -16,6 +22,7 @@ list-style-type: none;
 display: inline-block;
 margin: 0 2em 0 0;
 color: white;
+
 font-size: 1rem;
 text-transform: uppercase;
 &.active {
