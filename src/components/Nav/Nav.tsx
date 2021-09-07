@@ -29,7 +29,7 @@ const NavComponent = (props: any) => {
         Home
       </NavLink>
       <NavLink
-        to="main"
+        to="about"
         spy={true}
         smooth={true}
         duration={400}

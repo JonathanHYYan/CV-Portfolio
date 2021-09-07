@@ -8,7 +8,8 @@ interface Props {
 };
 
 export const NavBar = styled.nav<Props>`
-  height: 2em;
+  height: 4em;
+  padding: 1em 0 1em 0;
   width:100%;
   position: fixed;
   display: flex;
@@ -22,9 +23,9 @@ list-style-type: none;
 display: inline-block;
 margin: 0 2em 0 0;
 color: white;
-
 font-size: 1rem;
 text-transform: uppercase;
+
 &.active {
   border-bottom: 2px solid ${highlightColor};
   padding-bottom: 0.1rem;
