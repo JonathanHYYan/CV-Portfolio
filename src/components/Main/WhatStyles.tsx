@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device, primaryColor } from "../UI/themeStyles";
-import bgmLandscape from "../images/website.png"
-import bgmPortrait from "../images/websitePortrait.png"
+import bgmLandscape from "../images/website.png";
+import bgmPortrait from "../images/websitePortrait.png";
 
 interface monToggle {
   deviceToggle: boolean;
@@ -13,15 +13,17 @@ export const DeviceWrapper = styled.div`
   height: 20vmin;
 
   @media only ${device.mobileS} {
-    width:100%;
+    width: 100%;
     min-width: 400px;
   }
 `;
-//monitor : tablet
+
 export const MonitorToTablet = styled.div<monToggle>`
-  ${({ deviceToggle }) => (deviceToggle ? tablet : tablet)}
+  ${({ deviceToggle }) => (deviceToggle ? monitor : tablet)}
   transition: all 0.4s ease;
 `;
+
+//phone : laptop
 export const PhoneToLaptop = styled.div<monToggle>`
   ${({ deviceToggle }) => (deviceToggle ? phone : laptop)}
   transition: all 0.4s ease;
@@ -102,8 +104,9 @@ ${miniPortrait}
   border-radius: 5%;
   z-index: -10;
   @media only ${device.tabletS} {
+    transform: translate(-38.65%,-32%);
     width: 12vw;
-    height: 15.5vw;
+    height: 17vw;
   }
 }
 
@@ -129,25 +132,39 @@ border-radius: 10%;
 border: solid 0.3vw black;
 ${miniPortrait}
 
+@media only ${device.tabletS} {
+  width: 7vw;
+  height: 11.6vw;
+  border: solid 0.3vw black;
+}
+
 &:before {
   content: '';
   position: absolute;
-  left: 40%;
+  left: 43%;
   top: 5%;
   width: 0.5vw;
   height: 0.2vw;
   background-color: black;
+
+  @media only ${device.tabletS} {
+    border: solid 0.005vw grey;
+  }
 }
 
 &:after {
   content: '';
   position: absolute;
   bottom: 3%;
-  left: 46%;
+  left: 50%;
   height: 0.4vw;
   width: 0.4vw;
   border-radius: 50%;
   background-color: black;
+
+  @media only ${device.tabletS} {
+    background-color: grey;
+  }
 }
 `;
 
@@ -162,16 +179,27 @@ border-radius: 5%;
 border: solid 0.65vw black;
 ${miniLandscape}
 
+@media only ${device.tabletS} {
+  top: 7.5%;
+  width: 28vw;
+  height: 18.7vw;
+}
+
 &:before {
   content: '';
   position: absolute;
-  right: -14%;
+  right: -12.5%;
   top: 115%;
   width: 15.5vw;
   height: 0.95vw;
   border-radius: 0 0 50% 50%;
   border: solid 1px black;
   background-color: black;
+
+  @media only ${device.tabletS} {
+    width: 31.45vw;
+    background-color: black;
+  }
 }
 
 &:after {
