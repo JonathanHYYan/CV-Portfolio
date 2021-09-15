@@ -6,12 +6,13 @@ const NavComponent = (props: any) => {
   const [navBar, setNavBar] = useState(false)
 
   let navHeight = document.getElementById("landingPage")?.offsetHeight;
+  
 
   useEffect(()=>{
-    window.addEventListener("wheel", (e) => {
-      if(navHeight && navHeight*0.8 < window.scrollY  ) {
+    window.addEventListener("scroll", (e) => {
+      if(navHeight && navHeight*0.8 < window.scrollY) {
         setNavBar(true);
-      }else if(navHeight && navHeight*0.8 >= window.scrollY  ) {
+      }else if(navHeight && navHeight*0.8 >= window.scrollY) {
         setNavBar(false);
       };
     });

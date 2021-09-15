@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device, primaryColor } from "../UI/themeStyles";
+import { device, primaryColor, secondaryColor } from "../UI/themeStyles";
 import bgmLandscape from "../images/website.png";
 import bgmPortrait from "../images/websitePortrait.png";
 
@@ -25,7 +25,7 @@ export const MonitorToTablet = styled.div<monToggle>`
 
 //phone : laptop
 export const PhoneToLaptop = styled.div<monToggle>`
-  ${({ deviceToggle }) => (deviceToggle ? phone : laptop)}
+  ${({ deviceToggle }) => (deviceToggle ? laptop : laptop)}
   transition: all 0.4s ease;
 `;
 
@@ -211,5 +211,10 @@ ${miniLandscape}
   width: 0.2vw;
   border-radius: 50%;
   background-color: red;
+
+  @media only ${device.tabletS} {
+    top: 8.1vw;
+    left: 11.5vw;
+  }
 }
 `;

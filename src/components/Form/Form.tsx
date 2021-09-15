@@ -70,8 +70,6 @@ const Form = () => {
       body: JSON.stringify(formData),
     })
 
-    console.log(response);
-
     if(response.status === 200) {
       console.log("Message Sent");
       setFormSubmitted(true);

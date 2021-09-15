@@ -36,7 +36,7 @@ const Layout = (props: any) => {
  return (
     <ScrollContext.Provider value={value}>
       <Main>
-        {scroll && <NavBar />}
+        {scroll && <NavBar/>}
         {props.children}
       </Main>
     </ScrollContext.Provider>

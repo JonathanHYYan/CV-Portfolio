@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import { highlightColor, secondaryColor } from "../UI/themeStyles";
+import { device, highlightColor, secondaryColor } from "../UI/themeStyles";
+
 
 
 interface Props {
   navBackground: boolean
 };
+
 
 export const NavBar = styled.nav<Props>`
   height: 4em;
