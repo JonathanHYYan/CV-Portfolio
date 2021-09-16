@@ -44,8 +44,7 @@ const TechStack = () => {
       <CardTitle>Tech Stack</CardTitle>
       <CardText>
         I use multiple technologies such as HTML, CSS and JavaScript coupled
-        with superscripts like TypeScript and SCSS/SASS. For data management I
-        use MongoDB or Firebase.
+        with superscripts like TypeScript and SCSS/SASS. 
       </CardText>
       <IconStyle id="techStack">
         {initialView ? LogoHolder: null}

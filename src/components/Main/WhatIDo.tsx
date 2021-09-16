@@ -19,8 +19,7 @@ const WhatIDo = () => {
       <Card>
         <CardTitle>What I Do</CardTitle>
         <CardText>
-          I help you design graphical interfaces on websites to produce clear
-          intuitive experiences with a variety of web technologies that can be
+          I help you design websites that can be
           viewed on <CardHighlight>any device</CardHighlight> to meet both you
           and your clients needs.
         </CardText>

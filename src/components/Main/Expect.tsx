@@ -7,7 +7,7 @@ const Intro = () => {
       <Card>
         <CardTitle className="card-title">What to Expect?</CardTitle>
         <CardText className="card-text">
-          Imagine, design and create. Let's talk about the aesthetics and features that best represent you and your goals. 
+          Let's talk about the aesthetics and features that best represent you and your goals. 
         </CardText>
       </Card>
     </div>
