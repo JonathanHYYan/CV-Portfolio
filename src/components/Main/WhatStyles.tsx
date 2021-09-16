@@ -25,7 +25,7 @@ export const MonitorToTablet = styled.div<monToggle>`
 
 //phone : laptop
 export const PhoneToLaptop = styled.div<monToggle>`
-  ${({ deviceToggle }) => (deviceToggle ? laptop : laptop)}
+  ${({ deviceToggle }) => (deviceToggle ? phone : laptop)}
   transition: all 0.4s ease;
 `;
 

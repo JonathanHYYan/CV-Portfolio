@@ -33,6 +33,7 @@ text-transform: uppercase;
   padding-bottom: 0.1rem;
   right: 100%;
 }
+
 &:hover{
   color:  ${highlightColor};
   border-bottom: 2px solid $highlight-color;
