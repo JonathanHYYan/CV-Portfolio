@@ -87,6 +87,7 @@ export const Footer = styled.footer`
   ${StyledIconBase} {
     min-width: 2em;
     min-height: 2em;
+    color:white;
   }
 `;
 

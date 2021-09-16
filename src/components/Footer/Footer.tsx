@@ -12,7 +12,7 @@ const FootComponent = () => {
   const scrollCtx = useContext(ScrollContext);
   const scroll = scrollCtx.scroll;
   const footerContent = (
-    <Footer >
+    <Footer>
       <div className="socials">
         <p>You can find me socially on these platforms: </p>
         <ul>
@@ -20,13 +20,19 @@ const FootComponent = () => {
             <Twitter />
           </li>
           <li>
-            <LinkedinBox />
+            <a href="https://www.linkedin.com/in/jonathan-yan-8806b87b/">
+              <LinkedinBox />
+            </a>
           </li>
           <li>
-            <Github />
+            <a href="https://github.com/jyan1234">
+              <Github />
+            </a>
           </li>
           <li>
-            <Codepen />
+            <a href="https://codepen.io/your-work">
+              <Codepen />
+            </a>
           </li>
         </ul>
         <h3>
