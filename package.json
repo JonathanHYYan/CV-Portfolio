@@ -1,8 +1,8 @@
 {
+  "homepage": "https://jyan1234.github.io/CV-Portfolio",
   "name": "cv-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jyan1234.github.io/CV-Portfolio/",
   "dependencies": {
     "@styled-icons/remix-line": "^10.18.0",
     "@styled-icons/simple-icons": "^10.35.0",
@@ -30,7 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"  
   },
   "eslintConfig": {
     "extends": [
