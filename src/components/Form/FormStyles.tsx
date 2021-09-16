@@ -53,13 +53,18 @@ export const MessageInput = styled.textarea<Props>`
   }
 `;
 
-export const FormControls = styled.div``;
+export const FormControls = styled.div`
+
+`;
 
 export const Button = styled.button`
   padding 0.2em;
   width: 6em;
-  margin: 0.7em;
-`;
+  margin: 2em;
+  color: ${highlightColor};
+  border: solid 2px black;
+  border-radius: 1em;
+`
 
 export const FormError = styled.p`
   color: #f8786c;
