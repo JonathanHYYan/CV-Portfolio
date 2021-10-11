@@ -12,12 +12,9 @@ const animateCircle = (i: number) => keyframes`
   }
 `;
 
-
-
 const initSize = 5;
 const initMod = 8;
 const sizeMod = 0.89;
-
 
 for (let i = 1; i < 16; i++) {
   if (i > 1) {
@@ -46,7 +43,6 @@ for (let i = 1; i < 16; i++) {
     `);
   }
 };
-
 
 export const CircleHolder = styled.div`
 
