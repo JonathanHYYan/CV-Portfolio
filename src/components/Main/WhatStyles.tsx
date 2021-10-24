@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device, primaryColor, secondaryColor } from "../UI/themeStyles";
+import { device, primaryColor } from "../UI/themeStyles";
 import bgmLandscape from "../images/website.png";
 import bgmPortrait from "../images/websitePortrait.png";
 
@@ -97,9 +97,9 @@ ${miniPortrait}
   content: '';
   position: absolute;
   transform: translate(-50%,-50%);
-  width: 8.5vw;
+  width: 8.9vw;
   height: 11vw;
-  border: solid 0.4vw black;
+  border: solid 0.2vw black;
   background-color: ${primaryColor};
   border-radius: 5%;
   z-index: -10;

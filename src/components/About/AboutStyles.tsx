@@ -14,7 +14,6 @@ export const AboutMeTitle = styled.div<Props>`
   transition: transform 2s ease, opacity 4s;
   transform: translateX(${({ scrollPercent }) => -50 + scrollPercent}%);
 
-
   &:hover {
     transition: 4s;
     opacity: 0;
@@ -25,8 +24,6 @@ export const AboutMeTitle = styled.div<Props>`
     transition: transform 0.4s ease, opacity 4s;
   }
 `;
-
-
 
 export const AboutSection = styled.section<Props>`
   display: flex;

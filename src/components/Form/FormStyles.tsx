@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { highlightColor } from "../UI/themeStyles";
+import { device, highlightColor } from "../UI/themeStyles";
 
 interface Props {
   hasError: boolean;
@@ -7,12 +7,16 @@ interface Props {
 
 export const ContactForm = styled.form`
   padding-top:2em;
-  width: 80%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1em;
+
+  @media only ${device.mobileS} {
+    width: 95%;
+  }
 `;
 
 export const DataInput = styled.input<Props>`
@@ -22,6 +26,7 @@ export const DataInput = styled.input<Props>`
   margin: 0.7em;
   padding: 0.3em 1em;
   width: 100%;
+  
   ::placeholder {
     color: black;
   }
