@@ -155,7 +155,7 @@ const Form = () => {
           messageChange={messageChangeHandler}
           onBlur={messageBlurHandler}
         />
-        {inputInvalid && <FormError>Please fill in all sections</FormError>}
+        {inputInvalid && <FormError>Server not active on GitHub Pages</FormError>}
         <FormControls>{isLoading ? loadButton : submitButton}</FormControls>
       </ContactForm>
     </>

@@ -26,7 +26,7 @@ export const DataInput = styled.input<Props>`
   margin: 0.7em;
   padding: 0.3em 1em;
   width: 100%;
-  
+
   ::placeholder {
     color: black;
   }
@@ -58,9 +58,7 @@ export const MessageInput = styled.textarea<Props>`
   }
 `;
 
-export const FormControls = styled.div`
-
-`;
+export const FormControls = styled.div``;
 
 export const Button = styled.button`
   padding 0.2em;

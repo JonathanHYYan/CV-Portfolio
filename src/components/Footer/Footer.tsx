@@ -17,9 +17,6 @@ const FootComponent = () => {
         <p>You can find me socially on these platforms: </p>
         <ul>
           <li>
-            <Twitter />
-          </li>
-          <li>
             <a href="https://www.linkedin.com/in/jonathan-yan-8806b87b/">
               <LinkedinBox />
             </a>
@@ -30,7 +27,7 @@ const FootComponent = () => {
             </a>
           </li>
           <li>
-            <a href="https://codepen.io/your-work">
+            <a href="https://codepen.io/jyanhoyin">
               <Codepen />
             </a>
           </li>
