@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import {secondaryColor} from "../UI/themeStyles";
+import { secondaryColor } from "../UI/themeStyles";
 import { StyledIconBase } from "@styled-icons/styled-icon";
 import { Copyright } from "@styled-icons/remix-line";
 import { device } from "../UI/themeStyles";
-
 
 export const Footer = styled.footer`
   display: flex;
@@ -26,7 +25,7 @@ export const Footer = styled.footer`
     }
 
     @media only ${device.mobileS} {
-      font-size:2.5rem;
+      font-size: 2.5rem;
     }
   }
 
@@ -40,15 +39,15 @@ export const Footer = styled.footer`
     border-right: 2px solid white;
 
     @media only ${device.mobileL} {
-      width:100%;
+      width: 100%;
       border-right: 0;
     }
 
     & p {
-      display:flex;
+      display: flex;
       font-size: 0.8rem;
       @media only ${device.mobileL} {
-        width:100%;
+        width: 100%;
         text-align: center;
       }
     }
@@ -70,7 +69,7 @@ export const Footer = styled.footer`
     padding-left: 5%;
     justify-content: space-between;
     @media only ${device.mobileL} {
-      width:100%;
+      width: 100%;
     }
     & li {
       font-size: 1.3rem;
@@ -79,7 +78,7 @@ export const Footer = styled.footer`
       @media only ${device.mobileL} {
         display: inline-block;
         padding-right: 1em;
-        font-size: 0.8em
+        font-size: 0.8em;
       }
     }
   }
@@ -87,7 +86,7 @@ export const Footer = styled.footer`
   ${StyledIconBase} {
     min-width: 2em;
     min-height: 2em;
-    color:white;
+    color: white;
   }
 `;
 
