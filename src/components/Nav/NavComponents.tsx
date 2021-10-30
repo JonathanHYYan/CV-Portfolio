@@ -27,6 +27,7 @@ margin: 0 2em 0 0;
 color: white;
 font-size: 1rem;
 text-transform: uppercase;
+cursor: pointer;
 
 &.active {
   border-bottom: 2px solid ${highlightColor};
