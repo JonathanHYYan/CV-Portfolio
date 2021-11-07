@@ -67,6 +67,7 @@ export const Button = styled.button`
   color: ${highlightColor};
   border: solid 2px black;
   border-radius: 1em;
+  cursor: pointer;
 `
 
 export const FormError = styled.p`
