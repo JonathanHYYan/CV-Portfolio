@@ -22,7 +22,7 @@ const FootComponent = () => {
             </a>
           </li>
           <li>
-            <a href="https://github.com/jyan1234">
+            <a href="https://github.com/JonathanHYYan">
               <Github />
             </a>
           </li>
