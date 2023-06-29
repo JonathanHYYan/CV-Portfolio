@@ -1,0 +1,65 @@
+import { useEffect, useState } from "react";
+import CarouselSlide from "./CarouselSlide";
+import {
+  CarouselButton,
+  CarouselHolder,
+  CarouselIndicators,
+  CarouselNav,
+  Dot,
+  Left,
+  Right,
+} from "./Carouselstyles";
+import { slides } from "../Projects/Projects";
+
+interface SlideObject {
+  title: string;
+  role: string;
+  description: string;
+  stack: string[];
+}
+
+const Carousel: React.FC = () => {
+  const [activeIndex, setactiveIndex] = useState(0);
+
+  let CarouselContent = slides.map((slide: SlideObject, index: number) => {
+    return (
+      <CarouselSlide slide={slide} activeIndex={activeIndex} index={index} />
+    );
+  });
+
+  const updateIndex = (newIndex: number) => {
+    if (newIndex < 0) {
+      newIndex = slides.length;
+    } else if (newIndex >= slides.length) {
+      newIndex = 0;
+    }
+    setactiveIndex(newIndex);
+  };
+
+  return (
+    <>
+      <CarouselHolder>{CarouselContent}</CarouselHolder>
+      <CarouselNav>
+        <CarouselButton onClick={() => updateIndex(activeIndex - 1)}>
+          <Left />
+        </CarouselButton>
+        <CarouselIndicators>
+          {slides.map((slide, index) => {
+            return (
+              <Dot
+                key={index}
+                onClick={() => updateIndex(index)}
+                active={activeIndex === index ? true : false}
+              />
+            );
+          })}
+        </CarouselIndicators>
+        <CarouselButton onClick={() => updateIndex(activeIndex + 1)}>
+          <Right />
+        </CarouselButton>
+      </CarouselNav>
+    </>
+  );
+};
+
+export default Carousel;
