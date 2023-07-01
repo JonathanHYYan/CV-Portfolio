@@ -26,6 +26,7 @@ export const Slide = styled.section<Props>`
   height: 25em;
   display: ${({ active }) => (active ? "flex" : "none")};
   justify-content: space-evenly;
+
 `;
 
 export const SlideSquare = styled.div`
@@ -34,21 +35,28 @@ export const SlideSquare = styled.div`
   flex-direction: column;
   height: 100%;
   width: 33%;
-  background: grey;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  &:nth-child(1) {
+    border: 1px solid black;
+  }
+
+  &:nth-child(3) {
+    border: 1px solid black;
+  }
 `;
 
 export const ProjectTitle = styled.h2``;
 
-export const ProjectRole = styled.p`
-  margin-bottom: 1.5em;
+export const ProjectRole = styled.h3`
+  margin-bottom: 1em;
 `;
 
 export const ProjectDesc = styled.p`
-  width: 90%;
-  margin-bottom: 2em;
+  width: 95%;
+  margin-bottom: 1.5em;
 `;
 
 export const Tech = styled.div`
@@ -97,7 +105,9 @@ export const Right = styled(ArrowDropRight)`
 const spin = css` ${activeAnimation} 5s infinite;`;
 
 export const Dot = styled(Circle)<Props>`
-  width: 1.5em;
-  height: 1.5em;
+  transition-duration: 600ms;
+  width: ${({ active }) => (active ? '1.6em' : '1.5em')};
+  height: ${({ active }) => (active ? '1.6em' : '1.5em')};
+  margin: 0 0.5em 0 0.5em;
   animation: ${({ active }) => (active ? spin : null)};
 `;
