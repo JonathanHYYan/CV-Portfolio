@@ -25,14 +25,13 @@ const Carousel: React.FC = () => {
 
   let CarouselContent = slides.map((slide: SlideObject, index: number) => {
     return (
-      <a href={slide.link}>
       <CarouselSlide
         slide={slide}
         activeIndex={activeIndex}
         index={index}
+        link={slide.link}
       >
       </CarouselSlide>
-      </a>
     );
   });
 
