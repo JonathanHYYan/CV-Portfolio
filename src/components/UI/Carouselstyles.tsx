@@ -26,7 +26,6 @@ export const Slide = styled.section<Props>`
   height: 25em;
   display: ${({ active }) => (active ? "flex" : "none")};
   justify-content: space-evenly;
-
 `;
 
 export const SlideSquare = styled.div`
@@ -34,10 +33,11 @@ export const SlideSquare = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 33%;
+  width: 35%;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 
   &:nth-child(1) {
     border: 1px solid black;
@@ -102,12 +102,19 @@ export const Right = styled(ArrowDropRight)`
   width: 4em;
 `;
 
-const spin = css` ${activeAnimation} 5s infinite;`;
+const spin = css`
+  ${activeAnimation} 5s infinite;
+`;
 
 export const Dot = styled(Circle)<Props>`
   transition-duration: 600ms;
-  width: ${({ active }) => (active ? '1.6em' : '1.5em')};
-  height: ${({ active }) => (active ? '1.6em' : '1.5em')};
+  width: ${({ active }) => (active ? "1.6em" : "1.5em")};
+  height: ${({ active }) => (active ? "1.6em" : "1.5em")};
   margin: 0 0.5em 0 0.5em;
   animation: ${({ active }) => (active ? spin : null)};
 `;
+
+export const SlideImg = styled.img`
+  height: 100%;
+`;
+

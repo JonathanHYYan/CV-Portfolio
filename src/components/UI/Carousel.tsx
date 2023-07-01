@@ -14,8 +14,10 @@ import { slides } from "../Projects/Projects";
 interface SlideObject {
   title: string;
   role: string;
+  thumbnail?: any;
   description: string;
   stack: string[];
+  link: string;
 }
 
 const Carousel: React.FC = () => {
@@ -23,7 +25,14 @@ const Carousel: React.FC = () => {
 
   let CarouselContent = slides.map((slide: SlideObject, index: number) => {
     return (
-      <CarouselSlide slide={slide} activeIndex={activeIndex} index={index} />
+      <a href={slide.link}>
+      <CarouselSlide
+        slide={slide}
+        activeIndex={activeIndex}
+        index={index}
+      >
+      </CarouselSlide>
+      </a>
     );
   });
 
