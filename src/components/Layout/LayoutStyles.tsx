@@ -14,6 +14,11 @@ p {
   font-size: 1.2rem;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 h1, h3 {
   font-family: 'EB Garamond', serif;
   font-style: italic;
@@ -27,5 +32,4 @@ h1, h3 {
     font-size: 2rem;
   }
 }
-
 `;
