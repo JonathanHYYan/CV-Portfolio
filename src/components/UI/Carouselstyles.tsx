@@ -28,7 +28,7 @@ export const Slide = styled.section<Props>`
   justify-content: space-evenly;
 `;
 
-export const SlideSquare = styled.div`
+export const SlideSquare = styled.a`
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -38,14 +38,6 @@ export const SlideSquare = styled.div`
   align-items: center;
   text-align: center;
   overflow: hidden;
-
-  &:nth-child(1) {
-    border: 1px solid black;
-  }
-
-  &:nth-child(3) {
-    border: 1px solid black;
-  }
 `;
 
 export const ProjectTitle = styled.h2``;
@@ -115,6 +107,5 @@ export const Dot = styled(Circle)<Props>`
 `;
 
 export const SlideImg = styled.img`
-  height: 100%;
+  width: 100%;
 `;
-

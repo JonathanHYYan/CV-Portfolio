@@ -34,9 +34,15 @@ interface Props {
   slide: SlideObject;
   activeIndex: number;
   index: number;
+  link: string;
 }
 
-const CarouselSlide: React.FC<Props> = ({ slide, activeIndex, index }) => {
+const CarouselSlide: React.FC<Props> = ({
+  slide,
+  activeIndex,
+  index,
+  link,
+}) => {
   const techStack: any[] = [];
 
   slide.stack.forEach((stack) => {
@@ -105,13 +111,17 @@ const CarouselSlide: React.FC<Props> = ({ slide, activeIndex, index }) => {
 
   return (
     <Slide active={activeIndex === index ? true : false}>
-      <SlideSquare>
+      <SlideSquare href={link}>
         <ProjectTitle>{slide.title}</ProjectTitle>
         <ProjectRole>Role: {slide.role}</ProjectRole>
         <ProjectDesc>{slide.description}</ProjectDesc>
       </SlideSquare>
-      <SlideSquare><SlideImg src={slide.thumbnail}/></SlideSquare>
       <SlideSquare>
+        <a href={link}>
+          <SlideImg src={slide.thumbnail} />
+        </a>
+      </SlideSquare>
+      <SlideSquare href={link}>
         <h2>Tech Stack</h2>
         <Tech>{techStack}</Tech>
       </SlideSquare>
