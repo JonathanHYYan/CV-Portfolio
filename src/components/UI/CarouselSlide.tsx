@@ -28,6 +28,8 @@ type SlideObject = {
   description: string;
   stack: string[];
   link?: string;
+  description: string;
+  stack: string[];
 };
 
 interface Props {
@@ -38,7 +40,6 @@ interface Props {
 
 const CarouselSlide: React.FC<Props> = ({ slide, activeIndex, index }) => {
   const techStack: any[] = [];
-  console.log(slide.thumbnail)
 
   slide.stack.forEach((stack) => {
     if (stack === "php") {

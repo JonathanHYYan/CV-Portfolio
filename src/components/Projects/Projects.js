@@ -1,5 +1,4 @@
 import MME from "../images/MMERevise.png";
-
 export const slides = [
   {
     title: "MME Revise",

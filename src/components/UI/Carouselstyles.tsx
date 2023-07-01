@@ -117,3 +117,4 @@ export const Dot = styled(Circle)<Props>`
 export const SlideImg = styled.img`
   height: 100%;
 `;
+

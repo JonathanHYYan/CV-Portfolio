@@ -18,6 +18,8 @@ interface SlideObject {
   description: string;
   stack: string[];
   link: string;
+  description: string;
+  stack: string[];
 }
 
 const Carousel: React.FC = () => {
