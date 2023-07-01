@@ -101,7 +101,7 @@ const CarouselSlide: React.FC<Props> = ({ slide, activeIndex, index }) => {
   });
 
   return (
-    <Slide active={activeIndex === index ? true: false}>
+    <Slide active={activeIndex === index ? true : false}>
       <SlideSquare>
         <ProjectTitle>{slide.title}</ProjectTitle>
         <ProjectRole>Role: {slide.role}</ProjectRole>
