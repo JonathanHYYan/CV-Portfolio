@@ -6,6 +6,7 @@ import {
   StackIcon,
   Tech,
   SlideSquare,
+  SlideImg,
 } from "./Carouselstyles";
 import {
   Css,
@@ -23,8 +24,10 @@ import {
 type SlideObject = {
   title: string;
   role: string;
+  thumbnail?: any;
   description: string;
   stack: string[];
+  link?: string;
 };
 
 interface Props {
@@ -35,6 +38,7 @@ interface Props {
 
 const CarouselSlide: React.FC<Props> = ({ slide, activeIndex, index }) => {
   const techStack: any[] = [];
+  console.log(slide.thumbnail)
 
   slide.stack.forEach((stack) => {
     if (stack === "php") {
@@ -107,7 +111,7 @@ const CarouselSlide: React.FC<Props> = ({ slide, activeIndex, index }) => {
         <ProjectRole>Role: {slide.role}</ProjectRole>
         <ProjectDesc>{slide.description}</ProjectDesc>
       </SlideSquare>
-      <SlideSquare />
+      <SlideSquare><SlideImg src={slide.thumbnail}/></SlideSquare>
       <SlideSquare>
         <h2>Tech Stack</h2>
         <Tech>{techStack}</Tech>
