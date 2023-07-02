@@ -4,7 +4,7 @@ import Carousel from "../UI/Carousel";
 const Intro = () => {
   
   const content = (
-    <div>
+    <div id="projects">
       <Card>
         <CardTitle className="card-title">What to Expect?</CardTitle>
         <CardText className="card-text">

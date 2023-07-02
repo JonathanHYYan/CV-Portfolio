@@ -15,8 +15,8 @@ p {
 }
 
 a {
-  color: black;
   text-decoration: none;
+  color: inherit;
 }
 
 h1, h3 {
