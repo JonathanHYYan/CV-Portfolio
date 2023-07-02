@@ -2,11 +2,10 @@ import {
   Codepen,
   Github,
   LinkedinBox,
-  Twitter,
 } from "@styled-icons/remix-line";
 import { useContext } from "react";
 import ScrollContext from "../../store/context";
-import { Footer, CopyrightLogo } from "./FooterStyles";
+import { Footer, CopyrightLogo, FooterLink } from "./FooterStyles";
 
 const FootComponent = () => {
   const scrollCtx = useContext(ScrollContext);
@@ -39,9 +38,13 @@ const FootComponent = () => {
       </div>
       <div className="info">
         <ul>
-          <li>Contact</li>
-          <li>About me</li>
-          <li>Projects</li>
+          <FooterLink to="contact-form" spy={true} smooth={true} duration={400}>
+            Contact
+          </FooterLink>
+          <FooterLink to="about" spy={true} smooth={true} duration={400}>
+            About me
+          </FooterLink>
+          <FooterLink to="projects" spy={true} smooth={true} duration={400}>Projects</FooterLink>
         </ul>
       </div>
     </Footer>

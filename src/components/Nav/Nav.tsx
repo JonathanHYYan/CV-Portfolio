@@ -1,51 +1,33 @@
 import { useEffect, useState } from "react";
-import { NavBar, NavLink } from "./NavComponents";
-
+import { NavBar, NavLink } from "./NavStyles";
 
 const NavComponent = (props: any) => {
-  const [navBar, setNavBar] = useState(false)
+  const [navBar, setNavBar] = useState(false);
 
   let navHeight = document.getElementById("landingPage")?.offsetHeight;
-  
 
-  useEffect(()=>{
+  useEffect(() => {
     window.addEventListener("scroll", (e) => {
-      if(navHeight && navHeight*0.8 < window.scrollY) {
+      if (navHeight && navHeight * 0.8 < window.scrollY) {
         setNavBar(true);
-      }else if(navHeight && navHeight*0.8 >= window.scrollY) {
+      } else if (navHeight && navHeight * 0.8 >= window.scrollY) {
         setNavBar(false);
-      };
+      }
     });
   });
 
-
   return (
     <NavBar navBackground={navBar}>
-      <NavLink
-        to="landingPage"
-        spy={true}
-        smooth={true}
-        duration={400}
-      >
+      <NavLink to="landingPage" spy={true} smooth={true} duration={400}>
         Home
       </NavLink>
-      <NavLink
-        to="about"
-        spy={true}
-        smooth={true}
-        duration={400}
-      >
+      <NavLink to="about" spy={true} smooth={true} duration={400}>
         About
       </NavLink>
       {/* <li>
         Work
       </li> */}
-      <NavLink
-        to="contact-form"
-        spy={true}
-        smooth={true}
-        duration={400}
-      >
+      <NavLink to="contact-form" spy={true} smooth={true} duration={400}>
         Contact
       </NavLink>
     </NavBar>
