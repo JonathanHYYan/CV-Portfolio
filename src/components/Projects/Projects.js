@@ -32,7 +32,7 @@ export const slides = [
       "js",
       "react",
     ],
-    link: "#",
+    link: "https://github.com/JonathanHYYan/React-Tic-Tact-Toe",
   },
   
 ];
