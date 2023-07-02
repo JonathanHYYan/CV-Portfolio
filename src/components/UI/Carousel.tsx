@@ -37,7 +37,7 @@ const Carousel: React.FC = () => {
 
   const updateIndex = (newIndex: number) => {
     if (newIndex < 0) {
-      newIndex = slides.length;
+      newIndex = slides.length-1;
     } else if (newIndex >= slides.length) {
       newIndex = 0;
     }
