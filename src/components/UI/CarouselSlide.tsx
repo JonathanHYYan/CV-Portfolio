@@ -7,6 +7,7 @@ import {
   Tech,
   SlideSquare,
   SlideImg,
+  Styled,
 } from "./Carouselstyles";
 import {
   Css,
@@ -104,6 +105,12 @@ const CarouselSlide: React.FC<Props> = ({
       techStack.push(
         <StackIcon>
           <TypeScript />
+        </StackIcon>
+      );
+    } else if (stack === "styledComponents") {
+      techStack.push(
+        <StackIcon>
+          <Styled />
         </StackIcon>
       );
     }

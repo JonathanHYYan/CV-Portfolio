@@ -1,4 +1,6 @@
 import MME from "../images/MMERevise.png";
+import TicTacToe from "../images/react-tic-tac-toe.png";
+
 export const slides = [
   {
     title: "MME Revise",
@@ -18,4 +20,19 @@ export const slides = [
     ],
     link: "https://mmerevise.co.uk/",
   },
+  {
+    title: "React Tic Tac Toe",
+    role: "Junior Front End Developer",
+    thumbnail: TicTacToe,
+    description:
+      "React Tic Tac Toe Project for Hackajob Application. Features contain: Alternating players, win/tie conditions and board reset using React hooks and vanilla CSS",
+    stack: [
+      "html",
+      "css",
+      "js",
+      "react",
+    ],
+    link: "#",
+  },
+  
 ];
