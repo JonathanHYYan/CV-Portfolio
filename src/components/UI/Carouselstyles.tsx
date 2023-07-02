@@ -1,6 +1,7 @@
 import { ArrowDropLeft, ArrowDropRight } from "@styled-icons/remix-line";
 import { Circle } from "@styled-icons/simple-icons";
 import styled, { keyframes, css } from "styled-components";
+import { Styledcomponents } from "@styled-icons/simple-icons";
 
 interface Props {
   active: boolean;
@@ -90,6 +91,10 @@ export const Left = styled(ArrowDropLeft)`
 `;
 
 export const Right = styled(ArrowDropRight)`
+  height: 4em;
+  width: 4em;
+`;
+export const Styled = styled(Styledcomponents)`
   height: 4em;
   width: 4em;
 `;
