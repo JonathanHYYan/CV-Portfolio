@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/CV-Portfolio/static/css/main.1279c918.chunk.css",
-    "main.js": "/CV-Portfolio/static/js/main.e6e87723.chunk.js",
-    "main.js.map": "/CV-Portfolio/static/js/main.e6e87723.chunk.js.map",
+    "main.css": "/CV-Portfolio/static/css/main.569c9e4f.chunk.css",
+    "main.js": "/CV-Portfolio/static/js/main.7a0d7222.chunk.js",
+    "main.js.map": "/CV-Portfolio/static/js/main.7a0d7222.chunk.js.map",
     "runtime-main.js": "/CV-Portfolio/static/js/runtime-main.5edde8ce.js",
     "runtime-main.js.map": "/CV-Portfolio/static/js/runtime-main.5edde8ce.js.map",
     "static/js/2.238335fe.chunk.js": "/CV-Portfolio/static/js/2.238335fe.chunk.js",
     "static/js/2.238335fe.chunk.js.map": "/CV-Portfolio/static/js/2.238335fe.chunk.js.map",
     "index.html": "/CV-Portfolio/index.html",
-    "static/css/main.1279c918.chunk.css.map": "/CV-Portfolio/static/css/main.1279c918.chunk.css.map",
+    "static/css/main.569c9e4f.chunk.css.map": "/CV-Portfolio/static/css/main.569c9e4f.chunk.css.map",
     "static/js/2.238335fe.chunk.js.LICENSE.txt": "/CV-Portfolio/static/js/2.238335fe.chunk.js.LICENSE.txt",
     "static/media/MMERevise.fef71488.png": "/CV-Portfolio/static/media/MMERevise.fef71488.png",
     "static/media/background.d9694fcb.jpg": "/CV-Portfolio/static/media/background.d9694fcb.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.5edde8ce.js",
     "static/js/2.238335fe.chunk.js",
-    "static/css/main.1279c918.chunk.css",
-    "static/js/main.e6e87723.chunk.js"
+    "static/css/main.569c9e4f.chunk.css",
+    "static/js/main.7a0d7222.chunk.js"
   ]
 }
