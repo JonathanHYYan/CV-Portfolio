@@ -24,9 +24,9 @@ const NavComponent = (props: any) => {
       <NavLink to="about" spy={true} smooth={true} duration={400}>
         About
       </NavLink>
-      {/* <li>
-        Work
-      </li> */}
+      <NavLink to="projects" spy={true} smooth={true} duration={400}>
+        Projects
+      </NavLink>
       <NavLink to="contact-form" spy={true} smooth={true} duration={400}>
         Contact
       </NavLink>
