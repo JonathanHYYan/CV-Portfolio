@@ -14,6 +14,7 @@ export const NavBar = styled.nav<Props>`
   display: flex;
   z-index: 100;
   justify-content: flex-end;
+  color: white;
   background-color: ${({ navBackground }) =>
     navBackground ? secondaryColor : ""};
 `;
@@ -22,7 +23,6 @@ export const NavLink = styled(Link)`
   list-style-type: none;
   display: inline-block;
   margin: 0 2em 0 0;
-  color: white;
   font-size: 1rem;
   text-transform: uppercase;
   cursor: pointer;
