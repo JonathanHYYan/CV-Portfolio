@@ -14,19 +14,26 @@ export const DeviceWrapper = styled.div`
 
   @media only ${device.mobileS} {
     width: 100%;
-    min-width: 400px;
   }
 `;
 
 export const MonitorToTablet = styled.div<monToggle>`
   ${({ deviceToggle }) => (deviceToggle ? monitor : tablet)}
   transition: all 0.4s ease;
+
+  @media only ${device.mobileL} {
+    transform: scale(0.7);
+  }
 `;
 
 //phone : laptop
 export const PhoneToLaptop = styled.div<monToggle>`
   ${({ deviceToggle }) => (deviceToggle ? phone : laptop)}
   transition: all 0.4s ease;
+
+  @media only ${device.mobileL} {
+    transform: scale(0.7);
+  }
 `;
 
 const miniLandscape = `
@@ -50,7 +57,7 @@ border-radius: 5%;
 border: solid 4px black;
 ${miniLandscape}
 
-@media only ${device.tabletS} {
+@media only ${device.mobileL} {
   width: 32vw;
   padding: 8vw;
 }
@@ -87,7 +94,7 @@ padding: 4.2vw;
 border-radius: 0;
 border: solid 0.4vw black;
 ${miniPortrait}
-@media only ${device.tabletS} {
+@media only ${device.mobileL} {
   width: 12vw;
   height: 15.5vw;
 }
@@ -103,10 +110,11 @@ ${miniPortrait}
   background-color: ${primaryColor};
   border-radius: 5%;
   z-index: -10;
-  @media only ${device.tabletS} {
+  @media only ${device.mobileL} {
     transform: translate(-38.65%,-32%);
     width: 12vw;
     height: 17vw;
+    background-color: transparent;
   }
 }
 
@@ -132,7 +140,7 @@ border-radius: 10%;
 border: solid 0.3vw black;
 ${miniPortrait}
 
-@media only ${device.tabletS} {
+@media only ${device.mobileL} {
   width: 7vw;
   height: 11.6vw;
   border: solid 0.3vw black;
@@ -147,7 +155,7 @@ ${miniPortrait}
   height: 0.2vw;
   background-color: black;
 
-  @media only ${device.tabletS} {
+  @media only ${device.mobileL} {
     border: solid 0.005vw grey;
   }
 }
@@ -162,7 +170,7 @@ ${miniPortrait}
   border-radius: 50%;
   background-color: black;
 
-  @media only ${device.tabletS} {
+  @media only ${device.mobileL} {
     background-color: grey;
   }
 }
@@ -179,7 +187,7 @@ border-radius: 5%;
 border: solid 0.65vw black;
 ${miniLandscape}
 
-@media only ${device.tabletS} {
+@media only ${device.mobileL} {
   top: 7.5%;
   width: 28vw;
   height: 18.7vw;
@@ -196,7 +204,7 @@ ${miniLandscape}
   border: solid 1px black;
   background-color: black;
 
-  @media only ${device.tabletS} {
+  @media only ${device.mobileL} {
     width: 31.45vw;
     background-color: black;
   }
@@ -212,7 +220,7 @@ ${miniLandscape}
   border-radius: 50%;
   background-color: red;
 
-  @media only ${device.tabletS} {
+  @media only ${device.mobileL} {
     top: 8.1vw;
     left: 11.5vw;
   }

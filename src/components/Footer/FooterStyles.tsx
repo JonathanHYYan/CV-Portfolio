@@ -11,9 +11,12 @@ export const Footer = styled.footer`
   background-color: ${secondaryColor};
   color: white;
   width: 100%;
+  align-items: center;
 
   @media only ${device.mobileL} {
     flex-direction: column;
+    padding: 0 2em 0 2em;
+    justify-content: center;
   }
 
   h3 {
@@ -22,17 +25,17 @@ export const Footer = styled.footer`
     font-size: 3.5rem;
 
     @media only ${device.mobileL} {
-      font-size: 5rem;
-    }
-
-    @media only ${device.mobileS} {
-      font-size: 2.5rem;
+      with:90%;
+      font-size: 2rem;
     }
   }
 
   ul {
     list-style-type: none;
     padding: 2em 0 2em 0;
+    @media only ${device.mobileL} {
+      padding: 0.5em 0 0.5em 0;
+    }
   }
 
   .socials {
@@ -42,6 +45,7 @@ export const Footer = styled.footer`
     @media only ${device.mobileL} {
       width: 100%;
       border-right: 0;
+      padding-top: 1rem;
     }
 
     & p {
@@ -56,6 +60,9 @@ export const Footer = styled.footer`
     & ul {
       display: flex;
       align-items: center;
+      @media only ${device.mobileL} {
+        justify-content: center;
+      }
     }
 
     & li {
@@ -69,8 +76,11 @@ export const Footer = styled.footer`
     width: 40%;
     padding-left: 5%;
     justify-content: space-between;
+
     @media only ${device.mobileL} {
       width: 100%;
+      justify-content: center;
+      padding-left: 0;
     }
     & li {
       font-size: 1.3rem;
@@ -105,9 +115,11 @@ export const FooterLink = styled(Link)`
   align-items: center;
   margin-bottom: 1rem;
   justify-content: space-between;
+
   @media only ${device.mobileL} {
     width: 100%;
   }
+  
   & li {
     font-size: 1.3rem;
     padding-bottom: 1em;
