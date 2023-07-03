@@ -27,10 +27,10 @@ const FootComponent = () => {
             </a>
           </li>
         </ul>
-        <h3>
+        <ul>
           <CopyrightLogo />
-          Jonathan Yan
-        </h3>
+          <h3>Jonathan Yan</h3>
+        </ul>
       </div>
       <div className="info">
         <ul>

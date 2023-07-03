@@ -17,6 +17,12 @@ export const NavBar = styled.nav<Props>`
   color: white;
   background-color: ${({ navBackground }) =>
     navBackground ? secondaryColor : ""};
+
+  @media only ${device.mobileS} {
+    width: 95%;
+    justify-content: space-evenly;
+    font-size: 0.7rem;
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -38,5 +44,10 @@ export const NavLink = styled(Link)`
     border-bottom: 2px solid $highlight-color;
     padding-bottom: 0.1rem;
     right: 0;
+  }
+
+  @media only ${device.mobileS} {
+    margin: 0;
+    font-size: 0.8rem;
   }
 `;

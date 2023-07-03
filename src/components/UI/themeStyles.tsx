@@ -8,7 +8,7 @@ export const theme = {
 export const { primaryColor, secondaryColor, highlightColor } = theme;
 
 const viewPortSize = {
-  mobileS: "480px",
+  mobileS: "500px",
   mobileL: "812px",
   tabletS: "1023px",
   tabletL: "1200px",

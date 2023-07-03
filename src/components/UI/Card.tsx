@@ -10,8 +10,10 @@ export const Card = styled.div`
   margin: 10em 2.5% 5em 2.5%;
   padding: 2.5em;
 
-  @media only ${device.tabletS} {
-    margin: 1.5em 2.5% 4em 2.5%;
+  @media only ${device.mobileS} {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 `;
 
