@@ -7,8 +7,7 @@ import {
   Tech,
   SlideSquare,
   SlideImg,
-  Styled,
-  Tailwind,
+
 } from "./Carouselstyles";
 import {
   Css,
@@ -21,6 +20,9 @@ import {
   React,
   Scss,
   TypeScript,
+  Boot,
+  Styled,
+  Tailwind,
 } from "../Main/TechStyles";
 
 type SlideObject = {
@@ -118,6 +120,12 @@ const CarouselSlide: React.FC<Props> = ({
       techStack.push(
         <StackIcon>
           <Tailwind />
+        </StackIcon>
+      );
+    } else if (stack === "bootstrap") {
+      techStack.push(
+        <StackIcon>
+          <Boot />
         </StackIcon>
       );
     }
