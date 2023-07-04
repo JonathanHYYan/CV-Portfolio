@@ -49,5 +49,4 @@ export const slides = [
     ],
     link: "https://github.com/JonathanHYYan/React-Tic-Tact-Toe",
   },
-
 ];
