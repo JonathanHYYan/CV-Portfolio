@@ -1,7 +1,7 @@
 import { ArrowDropLeft, ArrowDropRight } from "@styled-icons/remix-line";
 import { Circle } from "@styled-icons/simple-icons";
 import styled, { keyframes, css } from "styled-components";
-import { Styledcomponents } from "@styled-icons/simple-icons";
+import { Styledcomponents, Tailwindcss } from "@styled-icons/simple-icons";
 import { device } from "./themeStyles";
 
 interface Props {
@@ -123,7 +123,13 @@ export const Right = styled(ArrowDropRight)`
   height: 4em;
   width: 4em;
 `;
+
 export const Styled = styled(Styledcomponents)`
+  height: 4em;
+  width: 4em;
+`;
+
+export const Tailwind = styled(Tailwindcss)`
   height: 4em;
   width: 4em;
 `;
