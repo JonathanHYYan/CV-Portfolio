@@ -8,6 +8,7 @@ import {
   SlideSquare,
   SlideImg,
   Styled,
+  Tailwind,
 } from "./Carouselstyles";
 import {
   Css,
@@ -111,6 +112,12 @@ const CarouselSlide: React.FC<Props> = ({
       techStack.push(
         <StackIcon>
           <Styled />
+        </StackIcon>
+      );
+    } else if (stack === "tailwind") {
+      techStack.push(
+        <StackIcon>
+          <Tailwind />
         </StackIcon>
       );
     }
