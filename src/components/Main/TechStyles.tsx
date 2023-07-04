@@ -13,6 +13,8 @@ import {
   Laravel,
   Jquery,
   Vuedotjs,
+  Styledcomponents,
+  Tailwindcss,
 } from "@styled-icons/simple-icons";
 
 export const IconStyle = styled.div`
@@ -81,30 +83,48 @@ export const React = styled(ReactLogo)`
 `;
 
 export const PHP = styled(Php)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #777bb3;
+  height: 4em;
+  width: 4em;
+  ${animationFunc(7)}
 `;
 
 export const LaravelLogo = styled(Laravel)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #f05340;
+  height: 4em;
+  width: 4em;
+  ${animationFunc(2)}
 `;
 
 export const Jq = styled(Jquery)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #0868ac;
+  height: 4em;
+  width: 4em;
+  ${animationFunc(3)}
 `;
 export const Boot = styled(Bootstrap)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #553c7b;
+  height: 4em;
+  width: 4em;
+  ${animationFunc(4)}
 `;
 
 export const VueJs = styled(Vuedotjs)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #41b883;
+  height: 4em;
+  width: 4em;
+  ${animationFunc(5)}
+`;
+
+export const Styled = styled(Styledcomponents)`
+  height: 4em;
+  width: 4em;
+  ${animationFunc(5)}
+`;
+
+export const Tailwind = styled(Tailwindcss)`
+  color:#38BDF8;
+  height: 4em;
+  width: 4em;
+  ${animationFunc(5)}
 `;
