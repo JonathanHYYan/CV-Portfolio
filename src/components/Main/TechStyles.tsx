@@ -66,6 +66,7 @@ export const Scss = styled(Sass)`
   color: #cd669a;
   ${animationFunc(3)}
 `;
+
 export const JavaScript = styled(Javascript)`
   color: #f0db4f;
   background-color: black;
@@ -102,6 +103,7 @@ export const Jq = styled(Jquery)`
   width: 4em;
   ${animationFunc(3)}
 `;
+
 export const Boot = styled(Bootstrap)`
   color: #553c7b;
   height: 4em;
