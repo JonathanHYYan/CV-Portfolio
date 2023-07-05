@@ -48,7 +48,7 @@ const Carousel: React.FC = () => {
     <>
       <CarouselHolder>{CarouselContent}</CarouselHolder>
       <CarouselNav>
-        <CarouselButton onClick={() => updateIndex(activeIndex - 1)}>
+        <CarouselButton aria-label="previous-slide" onClick={() => updateIndex(activeIndex - 1)}>
           <Left />
         </CarouselButton>
         <CarouselIndicators>
@@ -58,11 +58,12 @@ const Carousel: React.FC = () => {
                 key={index}
                 onClick={() => updateIndex(index)}
                 active={activeIndex === index ? true : false}
+                aria-label="project-indicator"
               />
             );
           })}
         </CarouselIndicators>
-        <CarouselButton onClick={() => updateIndex(activeIndex + 1)}>
+        <CarouselButton aria-label="next-slide" onClick={() => updateIndex(activeIndex + 1)}>
           <Right />
         </CarouselButton>
       </CarouselNav>

@@ -116,10 +116,10 @@ const Form = () => {
 
   const inputInvalid = used.name && used.email && used.message && !isValid;
 
-  const submitButton = <Button type="submit">Send</Button>;
+  const submitButton = <Button aria-label="send-form" type="submit">Send</Button>;
 
   const loadButton = (
-    <Button disabled type="submit">
+    <Button disabled aria-label="sending" type="submit">
       Sending...
     </Button>
   );
