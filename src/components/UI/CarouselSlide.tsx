@@ -7,7 +7,6 @@ import {
   Tech,
   SlideSquare,
   SlideImg,
-
 } from "./Carouselstyles";
 import {
   Css,
@@ -133,14 +132,14 @@ const CarouselSlide: React.FC<Props> = ({
 
   return (
     <Slide active={activeIndex === index ? true : false}>
-      <SlideSquare href={link}>
+      <SlideSquare aria-label={"link to " + slide.title} href={link}>
         <ProjectTitle>{slide.title}</ProjectTitle>
         <ProjectRole>Role: {slide.role}</ProjectRole>
         <ProjectDesc>{slide.description}</ProjectDesc>
       </SlideSquare>
       <SlideSquare>
-        <a href={link}>
-          <SlideImg src={slide.thumbnail} />
+        <a aria-label={"link to " + slide.title} href={link}>
+          <SlideImg src={slide.thumbnail} aria-label={slide.title} />
         </a>
       </SlideSquare>
       <SlideSquare href={link}>

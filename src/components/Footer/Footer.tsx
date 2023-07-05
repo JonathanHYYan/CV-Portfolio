@@ -12,17 +12,17 @@ const FootComponent = () => {
         <p>You can find me socially on these platforms: </p>
         <ul>
           <li>
-            <a href="https://www.linkedin.com/in/jonathan-yan-8806b87b/">
+            <a aria-label="linked-in" href="https://www.linkedin.com/in/jonathan-yan-8806b87b/">
               <LinkedinBox />
             </a>
           </li>
           <li>
-            <a href="https://github.com/JonathanHYYan">
+            <a aria-label="github" href="https://github.com/JonathanHYYan">
               <Github />
             </a>
           </li>
           <li>
-            <a href="https://codepen.io/jyanhoyin">
+            <a aria-label="codepen" href="https://codepen.io/jyanhoyin">
               <Codepen />
             </a>
           </li>
