@@ -76,7 +76,7 @@ ${miniLandscape}
   content: '';
   position: absolute;
   top:115%;
-  left: 38%;
+  left: 37%;
   width: 5vw;
   height: .7vw;
   background-color: currentColor;
