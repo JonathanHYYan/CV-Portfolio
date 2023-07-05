@@ -92,41 +92,41 @@ export const PHP = styled(Php)`
 
 export const LaravelLogo = styled(Laravel)`
   color: #f05340;
-  height: 4em;
-  width: 4em;
+  height: 3.4em;
+  width: 3.4em;
   ${animationFunc(2)}
 `;
 
 export const Jq = styled(Jquery)`
   color: #0868ac;
-  height: 4em;
-  width: 4em;
+  height: 3.4em;
+  width: 3.4em;
   ${animationFunc(3)}
 `;
 
 export const Boot = styled(Bootstrap)`
   color: #553c7b;
-  height: 4em;
-  width: 4em;
+  height: 3.4em;
+  width: 3.4em;
   ${animationFunc(4)}
 `;
 
 export const VueJs = styled(Vuedotjs)`
   color: #41b883;
-  height: 4em;
-  width: 4em;
+  height: 3.4em;
+  width: 3.4em;
   ${animationFunc(5)}
 `;
 
 export const Styled = styled(Styledcomponents)`
-  height: 4em;
-  width: 4em;
+  height: 3.4em;
+  width: 3.4em;
   ${animationFunc(5)}
 `;
 
 export const Tailwind = styled(Tailwindcss)`
   color:#38BDF8;
-  height: 4em;
-  width: 4em;
+  height: 3.4em;
+  width: 3.4em;
   ${animationFunc(5)}
 `;
