@@ -21,6 +21,10 @@ export const CarouselHolder = styled.div`
   justify-content: center;
   z-index: 10;
   height: 405px;
+
+  @media only ${device.mobileL}{
+    height: auto;
+  }
 `;
 
 export const Slide = styled.section<Props>`
@@ -67,7 +71,7 @@ export const ProjectDesc = styled.p`
   width: 95%;
   margin-bottom: 1.5em;
 
-  @media only ${device.mobileS} {
+  @media only ${device.mobileL} {
     display: none;
   }
 `;
@@ -132,6 +136,7 @@ export const Dot = styled(Circle)<Props>`
   height: ${({ active }) => (active ? "1.6em" : "1.5em")};
   margin: 0 0.5em 0 0.5em;
   animation: ${({ active }) => (active ? spin : null)};
+  opacity: ${({ active }) => (active ? '1' : '0.5')}
 `;
 
 export const SlideImg = styled.img`

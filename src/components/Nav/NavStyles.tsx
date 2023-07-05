@@ -19,7 +19,6 @@ export const NavBar = styled.nav<Props>`
     navBackground ? secondaryColor : ""};
 
   @media only ${device.mobileS} {
-    width: 95%;
     justify-content: space-evenly;
     font-size: 0.7rem;
   }
