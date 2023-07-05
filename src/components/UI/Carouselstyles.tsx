@@ -20,6 +20,7 @@ export const CarouselHolder = styled.div`
   flex-direction: column;
   justify-content: center;
   z-index: 10;
+  height: 405px;
 `;
 
 export const Slide = styled.section<Props>`
@@ -37,7 +38,6 @@ export const SlideSquare = styled.a`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 35%;
   justify-content: center;
   align-items: center;
