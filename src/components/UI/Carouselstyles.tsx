@@ -21,6 +21,7 @@ export const CarouselHolder = styled.div`
   justify-content: center;
   z-index: 10;
   height: 405px;
+  max-width: 1600px;
 
   @media only ${device.mobileL}{
     height: auto;
@@ -31,7 +32,6 @@ export const Slide = styled.section<Props>`
   display: ${({ active }) => (active ? "flex" : "none")};
   justify-content: space-evenly;
   align-items: center;
-  width: 95vw;
 
   @media only ${device.mobileL} {
     flex-direction: column;
@@ -141,6 +141,7 @@ export const Dot = styled(Circle)<Props>`
 
 export const SlideImg = styled.img`
   width: 100%;
+  max-width: 28em;
 
   @media only ${device.mobileL} {
     margin: 1rem 0 1.5rem 0;
