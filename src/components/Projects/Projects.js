@@ -1,6 +1,6 @@
 import MME from "../images/MMERevise.png";
 import TicTacToe from "../images/ReactTicTacToe.gif";
-import Tailwind from "../images/DSquared.gif";
+import Tailwind from "../images/Dsquared.gif";
 
 export const slides = [
   {
