@@ -119,8 +119,8 @@ export const VueJs = styled(Vuedotjs)`
 `;
 
 export const Styled = styled(Styledcomponents)`
-  height: 3.4em;
-  width: 3.4em;
+  height: 4em;
+  width: 4em;
   ${animationFunc(5)}
 `;
 
