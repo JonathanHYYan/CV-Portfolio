@@ -1,6 +1,7 @@
 import MME from "../images/MMERevise.png";
 import TicTacToe from "../images/ReactTicTacToe.gif";
 import Tailwind from "../images/DSquared.gif";
+import Bennetts from "../images/BennetSports.gif";
 
 export const slides = [
   {
@@ -34,6 +35,21 @@ export const slides = [
       "tailwind",
     ],
     link: "https://github.com/JonathanHYYan/Tailwind-CSS-Demo",
+  },
+  {
+    title: "Bennetts Sport",
+    role: "Junior Front End Developer",
+    thumbnail: Bennetts,
+    description:
+      "Retail website designed from scracth connected to Bennetts server to dynamically render available retailers and sizes for each product.",
+    stack: [
+      "html",
+      "css",
+      "js",
+      "react",
+      "styledComponents",
+    ],
+    link: "https://github.com/JonathanHYYan/Retail-Website",
   },
   {
     title: "React Tic Tac Toe",
