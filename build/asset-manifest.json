@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/CV-Portfolio/static/css/main.569c9e4f.chunk.css",
-    "main.js": "/CV-Portfolio/static/js/main.864bbe99.chunk.js",
-    "main.js.map": "/CV-Portfolio/static/js/main.864bbe99.chunk.js.map",
+    "main.js": "/CV-Portfolio/static/js/main.1c3a9306.chunk.js",
+    "main.js.map": "/CV-Portfolio/static/js/main.1c3a9306.chunk.js.map",
     "runtime-main.js": "/CV-Portfolio/static/js/runtime-main.4c3b95fe.js",
     "runtime-main.js.map": "/CV-Portfolio/static/js/runtime-main.4c3b95fe.js.map",
     "static/js/2.8b0a582c.chunk.js": "/CV-Portfolio/static/js/2.8b0a582c.chunk.js",
@@ -10,6 +10,7 @@
     "index.html": "/CV-Portfolio/index.html",
     "static/css/main.569c9e4f.chunk.css.map": "/CV-Portfolio/static/css/main.569c9e4f.chunk.css.map",
     "static/js/2.8b0a582c.chunk.js.LICENSE.txt": "/CV-Portfolio/static/js/2.8b0a582c.chunk.js.LICENSE.txt",
+    "static/media/BennetSports.a97ad62e.gif": "/CV-Portfolio/static/media/BennetSports.a97ad62e.gif",
     "static/media/DSquared.1af0d398.gif": "/CV-Portfolio/static/media/DSquared.1af0d398.gif",
     "static/media/MMERevise.fef71488.png": "/CV-Portfolio/static/media/MMERevise.fef71488.png",
     "static/media/ReactTicTacToe.dd830341.gif": "/CV-Portfolio/static/media/ReactTicTacToe.dd830341.gif",
@@ -22,6 +23,6 @@
     "static/js/runtime-main.4c3b95fe.js",
     "static/js/2.8b0a582c.chunk.js",
     "static/css/main.569c9e4f.chunk.css",
-    "static/js/main.864bbe99.chunk.js"
+    "static/js/main.1c3a9306.chunk.js"
   ]
 }
