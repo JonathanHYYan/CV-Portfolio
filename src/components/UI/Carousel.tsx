@@ -58,7 +58,7 @@ const Carousel: React.FC = () => {
                 key={index}
                 onClick={() => updateIndex(index)}
                 active={activeIndex === index ? true : false}
-                aria-label="project-indicator"
+                aria-label={slide.title}
               />
             );
           })}
