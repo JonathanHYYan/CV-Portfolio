@@ -12,7 +12,10 @@ const FootComponent = () => {
         <p>You can find me socially on these platforms: </p>
         <ul>
           <li>
-            <a aria-label="linked-in" href="https://www.linkedin.com/in/jonathan-yan-8806b87b/">
+            <a
+              aria-label="linked-in"
+              href="https://www.linkedin.com/in/jonathan-yan-8806b87b/"
+            >
               <LinkedinBox />
             </a>
           </li>
@@ -28,21 +31,36 @@ const FootComponent = () => {
           </li>
         </ul>
         <ul>
-          <CopyrightLogo />
-          <h3>Jonathan Yan</h3>
+          <li>
+            <CopyrightLogo />
+          </li>
+          <li>
+            <h3>Jonathan Yan</h3>
+          </li>
         </ul>
       </div>
       <div className="info">
         <ul>
-          <FooterLink to="contact-form" spy={true} smooth={true} duration={400}>
-            Contact
-          </FooterLink>
-          <FooterLink to="about" spy={true} smooth={true} duration={400}>
-            About me
-          </FooterLink>
-          <FooterLink to="projects" spy={true} smooth={true} duration={400}>
-            Projects
-          </FooterLink>
+          <li>
+            <FooterLink
+              to="contact-form"
+              spy={true}
+              smooth={true}
+              duration={400}
+            >
+              Contact
+            </FooterLink>
+          </li>
+          <li>
+            <FooterLink to="about" spy={true} smooth={true} duration={400}>
+              About me
+            </FooterLink>
+          </li>
+          <li>
+            <FooterLink to="projects" spy={true} smooth={true} duration={400}>
+              Projects
+            </FooterLink>
+          </li>
         </ul>
       </div>
     </Footer>
