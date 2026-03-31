@@ -41,7 +41,7 @@ export const slides = [
     role: "Junior Front End Developer",
     thumbnail: Bennetts,
     description:
-      "Retail website designed from scracth connected to Bennetts server to dynamically render available retailers and sizes for each product.",
+      "Retail website designed from scratch connected to Bennetts server to dynamically render available retailers and sizes for each product.",
     stack: [
       "html",
       "css",

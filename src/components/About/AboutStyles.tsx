@@ -49,7 +49,7 @@ export const AboutSection = styled.section<Props>`
 
     @media only ${device.mobileS} {
       background-size: 1100px, 733px;
-      opacity: ${({scrollPercent}) => (scrollPercent > 50) ? 1 : 0 }
+      opacity: ${({ scrollPercent }) => (scrollPercent > 50 ? 1 : 0)};
     }
   }
 
