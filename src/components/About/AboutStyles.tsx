@@ -1,77 +1,104 @@
 import styled from "styled-components";
-import faceImg from "../images/dummyAboutMePic.jpg";
-import { device } from "../UI/themeStyles";
+import { device, theme, Section, opacity1, opacity2 } from "../UI/themeStyles";
 
-interface Props {
-  scrollPercent: number;
-}
+const { primaryColor, secondaryColor, highlightColor } = theme;
 
-export const AboutMeTitle = styled.div<Props>`
-  color: $secondary-color;
-  font-size: 10rem;
-  font-weight: 1000;
-  opacity: 0.1;
-  transition: transform 2s ease, opacity 4s;
-  transform: translateX(${({ scrollPercent }) => -50 + scrollPercent}%);
+export const AboutSection = styled(Section)`
+  display: flex;
+  background-color: white;
+  flex-direction: row;
 
-  &:hover {
-    transition: 4s;
-    opacity: 0;
-  }
-
-  @media only ${device.mobileS} {
-    font-size: 5.5rem;
-    transition: transform 0.4s ease, opacity 4s;
+  @media ${device.tabletS} {
+    flex-direction: column;
   }
 `;
 
-export const AboutSection = styled.section<Props>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 20em;
+export const AboutImage = styled.div`
   position: relative;
+  flex: 40%;
+  margin: 2rem;
+  ${opacity1}
+`;
+
+export const AboutImageContainer = styled.div`
+  position: relative;
+  height: 25rem;
   overflow: hidden;
 
-  &:before {
-    opacity: 0;
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 4s;
-    background-image: url(${faceImg});
-
-    @media only ${device.mobileS} {
-      background-size: 1100px, 733px;
-      opacity: ${({ scrollPercent }) => (scrollPercent > 50 ? 1 : 0)};
-    }
-  }
-
-  &:hover {
-    &:before {
-      opacity: 0.4;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 `;
 
+
 export const AboutText = styled.div`
-  position: absolute;
-  color: $secondary-color;
-  font-size: 2rem;
-  font-weight: 700;
+  flex: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+  ${opacity2}
+`;
 
-  &:before {
-    opacity: 1;
+export const Header = styled.header`
+  margin-bottom: 1.5rem;
+  && {
+    font-size: 1.3em;
+    font-weight: 700;
   }
+`;
 
-  @media only ${device.mobileS} {
-    font-size: 1.5rem;
-    margin: 10%;
+export const Text = styled.div`
+  color: ${secondaryColor};
+  margin-bottom: 1rem;
+`;
+
+export const Skills = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+
+  @media ${device.mobileL} {
+    flex-direction: column;
+    align-items: center;
   }
+`;
+
+export const SkillBox = styled.div`
+  flex: 30%;
+  background-color: ${primaryColor};
+  margin: 1rem;
+  padding: 1rem 2rem;
+  max-width: 15rem;
+
+  @media ${device.mobileL} {
+    min-width: 15em;
+  }
+`;
+
+export const SkillPlus = styled.div`
+  font-size: 0.9em;
+  padding-left: 0.1em;
+`;
+
+export const SkillCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
+
+export const SkillNum = styled.div`
+  color: ${highlightColor};
+  margin-bottom: 0.5rem;
+  font-size: 1.75em;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const SkillLabel = styled.div`
+  font-size: 0.8em;
 `;
