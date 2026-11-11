@@ -1,43 +1,55 @@
 import NavBar from "../Nav/Nav";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ScrollContext from "../../store/context";
-import { Main } from "./LayoutStyles";
+import { Main } from "./LayoutStyles"
 
-const Layout = (props: any) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const Layout = ({children}: Props) => {
   const [scroll, setScroll] = useState(false);
   const [landingTransition, setLandingTransition] = useState(false);
   const [form, setForm] = useState(false);
-  const value = {scroll, landingTransition, form, setForm};
-  
-  if(!scroll) {
-    document.body.style.overflow = "hidden";
-  } else {
-    setTimeout(function() {
-      document.body.style.overflow = "visible";
-      setLandingTransition(true);
-    }, 1500)
-  }
+  const value = { scroll, landingTransition, form, setForm };
 
   useEffect(() => {
-    setScroll(false)
-    window.addEventListener("wheel", (e) => {
+    const handleWheel = (e: WheelEvent) => {
       if (e.deltaY) {
         setScroll(true);
       }
-    });
-    setTimeout(function() {
-      if(!scroll){
-        setScroll(true);
-      }
-    },2000)
-    
-  }, []);
+    };
 
- return (
+    window.addEventListener("wheel", handleWheel);
+
+    const timeoutID = setTimeout(function () {
+        setScroll(true);
+    }, 2000);
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      clearTimeout(timeoutID);
+    };
+  }, [scroll]);
+
+  useEffect(() => {
+    if (!scroll) {
+      document.body.style.overflow = "hidden";
+    } else {
+      const timeoutID = setTimeout(function () {
+        document.body.style.overflow = "visible";
+        setLandingTransition(true);
+      }, 1500);
+
+      return () => clearTimeout(timeoutID);
+    }
+  }, [scroll]);
+
+  return (
     <ScrollContext.Provider value={value}>
       <Main>
-        {scroll && <NavBar/>}
-        {props.children}
+        {scroll && <NavBar />}
+        {children}
       </Main>
     </ScrollContext.Provider>
   );

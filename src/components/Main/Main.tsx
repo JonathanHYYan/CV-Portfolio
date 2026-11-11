@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import ScrollContext from "../../store/context";
-import WhatIDo from "./WhatIDo";
-import TechStack from "./TechStack";
-import Expect from "./Expect";
+import Career from "../Career/Career";
+import TechStack from "../TechStack/TechStack";
+import Work from "../Work/Work";
 import { MainSection } from "./MainStyles";
+
+window.history.scrollRestoration='manual';
 
 const Main = () => {
   const scrollCtx = useContext(ScrollContext);
@@ -11,17 +13,13 @@ const Main = () => {
 
   const content = (
     <MainSection id="main">
-      <WhatIDo />
+      <Career />
       <TechStack />
-      <Expect />
+      <Work />
     </MainSection>
   );
 
-  return (
-    <>
-      {scroll && content}
-    </>
-  );
+  return <>{scroll && content}</>;
 };
 
 export default Main;

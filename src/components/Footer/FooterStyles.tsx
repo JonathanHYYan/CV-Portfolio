@@ -1,13 +1,16 @@
 import styled from "styled-components";
-import { secondaryColor } from "../UI/themeStyles";
+import {
+  fontSize,
+  highlightColor,
+  primaryColor,
+  secondaryColor,
+} from "../UI/themeStyles";
 import { StyledIconBase } from "@styled-icons/styled-icon";
 import { Copyright } from "@styled-icons/remix-line";
 import { device } from "../UI/themeStyles";
 import { Link } from "react-scroll";
 
 export const Footer = styled.footer`
-  display: flex;
-  padding: 3em 2em 3em 2em;
   background-color: ${secondaryColor};
   color: white;
   width: 100%;
@@ -15,119 +18,121 @@ export const Footer = styled.footer`
 
   @media only ${device.mobileL} {
     flex-direction: column;
-    padding: 0 2em 0 2em;
     justify-content: center;
   }
 
-  h3 {
-    display: flex;
-    align-items: center;
-    font-size: 3.5rem;
-
-    @media only ${device.mobileL} {
-      with:90%;
-      font-size: 2rem;
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 2em 0 2em 0;
-    @media only ${device.mobileL} {
-      padding: 0.5em 0 0.5em 0;
-    }
-  }
-
-  .socials {
-    width: 60%;
-    border-right: 2px solid white;
-
-    @media only ${device.mobileL} {
-      width: 100%;
-      border-right: 0;
-      padding-top: 1rem;
-    }
-
-    & p {
-      display: flex;
-      font-size: 0.8rem;
-      @media only ${device.mobileL} {
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    & ul {
-      display: flex;
-      align-items: center;
-      @media only ${device.mobileL} {
-        justify-content: center;
-      }
-    }
-
-    & li {
-      margin: 0 1.5em 0 0;
-    }
-  }
-
-  .info {
-    display: flex;
-    align-items: center;
-    width: 40%;
-    padding-left: 5%;
-    justify-content: space-between;
-
-    @media only ${device.mobileL} {
-      width: 100%;
-      justify-content: center;
-      padding-left: 0;
-    }
-    & li {
-      font-size: 1.3rem;
-      padding-bottom: 1em;
-
-      @media only ${device.mobileL} {
-        display: inline-block;
-        padding-right: 1em;
-        font-size: 0.8em;
-      }
-    }
-  }
-
   ${StyledIconBase} {
-    min-width: 2em;
-    min-height: 2em;
+    width: 2em;
+    height: 2em;
     color: white;
+    margin-right: 0.5rem;
   }
+`;
+
+export const FooterSection = styled.section`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+
+  @media ${device.mobileL}{
+    flex-direction: column;
+  }
+
 `;
 
 export const CopyrightLogo = styled(Copyright)`
   width: 1em;
-  hight: 1em;
+  height: 1em;
+`;
+
+export const Links = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0;
+  opacity: 0.5;
 `;
 
 export const FooterLink = styled(Link)`
   color: white;
-  font-size: 1rem;
-  text-transform: uppercase;
+  font-size: ${fontSize.tiny};
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
   justify-content: space-between;
 
   @media only ${device.mobileL} {
     width: 100%;
   }
-  
-  & li {
-    font-size: 1.3rem;
-    padding-bottom: 1em;
 
-    @media only ${device.mobileL} {
-      display: inline-block;
-      padding-right: 1em;
-      font-size: 0.8em;
-    }
+  @media only ${device.mobileL} {
+    display: inline-block;
+    padding-right: 1em;
+    font-size: 0.8em;
   }
+`;
+
+export const CopyRight = styled.div`
+  font-size: ${fontSize.tiny};
+  opacity: 0.5;
+`;
+
+export const FooterTitle = styled.div`
+  font-size: ${fontSize.giant};
+  margin-top: 1rem;
+  font-weight: bold;
+  line-height: 3rem;
+`;
+
+export const Contact = styled.div`
+  margin: 2.2rem 0;
+`;
+
+export const ContactRow = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: ${fontSize.tiny};
+  margin: 0 0 4rem 0;
+
+  a{
+    word-break: break-all;
+  }
+`;
+
+export const FooterBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const FootNote = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: #1a1a1a;
+  align-items: center;
+  padding: 2rem 0;
+`;
+
+export const ExternalLinks = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: ${fontSize.tiny};
+  opacity: 0.5;
+`;
+
+export const EmailLink = styled.a`
+  &&{
+    color: black;
+    font-size: ${fontSize.small};
+    letter-spacing: 0.1rem;
+  }
+  
+  margin-top: 2rem;
+  background-color: ${highlightColor};
+  padding: 1rem;
+  border-radius: 5px;
+  align-self: flex-start;
+  display: inline;
 `;
